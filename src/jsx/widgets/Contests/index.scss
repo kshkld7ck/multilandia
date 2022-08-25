@@ -1,0 +1,9 @@
+.movies-block_theme_movies {
+    &.movies-block_theme_contests {
+        background: url("../../../assets/images/contestsbg.png") no-repeat;
+        &:after {
+            background: url('../../../assets/images/foxies2.png');
+            background-size: contain;
+        }
+    }
+}

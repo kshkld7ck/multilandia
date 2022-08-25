@@ -1,0 +1,121 @@
+@import "../../../node_modules/reset-css/reset.css";
+@import "~bootstrap/scss/bootstrap";
+@import "./variables/screen";
+@import "./variables/main";
+@import "./variables/colors";
+@import "./mixins/flex";
+@import "./components/container";
+@import "./components/btn";
+@import "./components/link";
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('../fonts/ZenMaruGothic-Black.eot');
+    src: local('Zen Maru Gothic Black'), local('ZenMaruGothic-Black'), url('../fonts/ZenMaruGothic-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Black.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Black.woff') format('woff'), url('../fonts/ZenMaruGothic-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('../fonts/ZenMaruGothic-Bold.eot');
+    src: local('Zen Maru Gothic Bold'), local('ZenMaruGothic-Bold'), url('../fonts/ZenMaruGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Bold.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Bold.woff') format('woff'), url('../fonts/ZenMaruGothic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('../fonts/ZenMaruGothic-Light.eot');
+    src: local('Zen Maru Gothic Light'), local('ZenMaruGothic-Light'), url('../fonts/ZenMaruGothic-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Light.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Light.woff') format('woff'), url('../fonts/ZenMaruGothic-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('../fonts/ZenMaruGothic-Medium.eot');
+    src: local('Zen Maru Gothic Medium'), local('ZenMaruGothic-Medium'), url('../fonts/ZenMaruGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Medium.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Medium.woff') format('woff'), url('../fonts/ZenMaruGothic-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('../fonts/ZenMaruGothic-Regular.eot');
+    src: local('Zen Maru Gothic Regular'), local('ZenMaruGothic-Regular'), url('../fonts/ZenMaruGothic-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Regular.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Regular.woff') format('woff'), url('../fonts/ZenMaruGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: "Zen Maru Gothic" !important;
+}
+
+@font-face {
+    font-family: 'Baloo';
+    src: url('../fonts/../fonts/baloo-cyrillic.ttf');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Baloo" !important
+}
+
+body,
+.page {
+    overflow-x: hidden;
+}
+
+.page {
+    overflow-y: hidden;
+}
+
+.arrow-link {
+    font-family: soyuz !important;
+    display: inline-block;
+    transition: 0.2s;
+    svg {
+        margin-left: 10px;
+        transition: 0.2s;
+    }
+    &:hover {
+        svg {
+            margin-left: 17px;
+        }
+    }
+    svg {
+        fill: #fff;
+    }
+}
+
+h3 {
+    @media (max-width: 768px) {
+        font-size: 28px !important;
+    }
+}
+
+.scroll-to-top {
+    right: unset;
+    left: 40px;
+    @media (max-width: 768px) {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+body {
+    background: url('../../assets/images/bg.svg');
+    // background: linear-gradient(0deg, #FFEDDC, #FFEDDC), #FFFFFF, ;
+}

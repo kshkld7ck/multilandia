@@ -1,0 +1,45 @@
+.promo-video {
+    margin-bottom: 110px;
+    margin-top: 45px;
+    .promo-video__content {
+        position: relative;
+    }
+    img {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+        background: #f2f2f2;
+        border-radius: 40px;
+    }
+    .promo-video__item-info {
+        background: linear-gradient(90deg, #733fff 0%, #f67780 100%);
+        border-radius: 75px 0px;
+        position: absolute;
+        bottom: 130px;
+        left: 80px;
+        padding: 40px;
+        .promo-video__item-title {
+            font-weight: 800;
+            color: #fff;
+            font-size: 52px;
+            line-height: 60px;
+            margin-bottom: 0;
+            font-family: Baloo;
+        }
+        .promo-video__item-text {
+            font-weight: 400;
+            font-size: 18px;
+            text-transform: uppercase;
+            line-height: 26px;
+            color: #fff;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .btn {
+            position: absolute;
+            bottom: -35px;
+            height: 70px;
+        }
+    }
+}

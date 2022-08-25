@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    @media (min-width: 1800px) {
+        max-width: 1720px;
+    }
+    @media (min-width: 1200px) and (max-width: 1799px) {
+        max-width: 1120px;
+        width: 100%;
+    }
+    @media (min-width: 991px) and (max-width: 1200px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (max-width: 992px) {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (min-width: $screen-md-max) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media #{$screen-xs} {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
