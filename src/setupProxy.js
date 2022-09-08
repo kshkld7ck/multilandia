@@ -4,7 +4,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'https://multilandia.tv:4433/',
+            target: 'https://mland.olit.su/',
             changeOrigin: true,
         })
     );

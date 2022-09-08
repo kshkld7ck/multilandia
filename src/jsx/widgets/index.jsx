@@ -1,9 +1,12 @@
 import Banners from './Banners'
+import Breadcrumbs from './Breadcrumbs'
 import Contests from './Contests'
 import Games from './Games'
 import Guide from './Guide'
 import Movies from './Movies'
+import MoviesPage from './MoviesPage'
 import News from './News'
+import Programms from './Programms'
 import PromoVideo from './PromoVideo'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
@@ -22,13 +25,15 @@ import PromoVideo from './PromoVideo'
 const Widgets = {
 
     "banners": Banners,
-    "movies": Movies,
+    "items_slider": Movies,
     "guide": Guide,
-    "recommend": Movies,
     "contests": Contests,
-    "video": PromoVideo,
+    "video_big": PromoVideo,
     "games": Games,
-    "news": News,
+    "simple_slider": News,
+    "breadcrumbs": Breadcrumbs,
+    "programms": Programms,
+    "movies_search": MoviesPage,
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,

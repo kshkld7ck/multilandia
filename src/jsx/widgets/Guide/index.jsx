@@ -50,9 +50,9 @@ function Guide({ config }) {
                 <Slider ref={(slider) => setSliderRef(slider)} {...settings}>
                     {config.items.map((el) => {
                         return <div className="guide__item">
-                            <img src={`https://multilandia.tv:4433/${el.image}`} className="guide__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="guide__image" />
                             <p className="guide__title">{el.title}</p>
-                            <span className="guide__time">{el.time}</span>
+                            <span className="guide__time"><span>{el.time}</span></span>
                             <span className="guide__age">{el.age}</span>
                         </div>
                     })}

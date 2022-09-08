@@ -1,5 +1,16 @@
 .movies-block {
+    .btn_hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
     &_theme_movies {
+        &.movies-block_theme_contests {
+            background: url("../../../assets/images/contestsbg.png") no-repeat;
+            &:after {
+                background: url("../../../assets/images/foxies2.png");
+                background-size: contain;
+            }
+        }
         background: url("../../../assets/images/moviesbg.png") no-repeat;
         background-size: cover;
         background-position: center;
@@ -31,7 +42,7 @@
         }
         .movies__item {
             background: radial-gradient( 100% 100% at 0% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.08) 100%);
-            box-shadow: 0px -10px 20px rgba(80, 79, 111, 0.1), inset -5px -5px 250px rgba(255, 255, 255, 0.02), 0 -1px 0 1px rgba(255, 255, 255, .5);
+            box-shadow: 0px -10px 20px rgba(80, 79, 111, 0.1), inset -5px -5px 250px rgba(255, 255, 255, 0.02), 0 -1px 0 1px rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(42px);
             border-radius: 20px;
             padding: 25px;
@@ -152,7 +163,7 @@
             font-size: 52px;
             line-height: 60px;
             text-transform: uppercase;
-            color: #5B4670;
+            color: #5b4670;
             margin-bottom: 20px;
         }
         .movies__footer {
@@ -167,7 +178,7 @@
             }
         }
         .movies__item {
-            background: rgba(255, 255, 255, .5);
+            background: rgba(255, 255, 255, 0.5);
             // box-shadow: 0px -10px 20px rgba(80, 79, 111, 0.1), inset -5px -5px 250px rgba(255, 255, 255, 0.02);
             // backdrop-filter: blur(42px);
             border-radius: 20px;
@@ -182,7 +193,7 @@
                 font-size: 24px;
                 line-height: 32px;
                 text-transform: uppercase;
-                color: #5B4670;
+                color: #5b4670;
                 margin: 20px 0 10px 0px;
             }
             .movies__text {
@@ -194,7 +205,7 @@
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 24px;
-                color: #5B4670;
+                color: #5b4670;
                 margin-bottom: 20px;
             }
             .movies__sub {

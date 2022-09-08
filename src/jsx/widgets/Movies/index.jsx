@@ -3,6 +3,7 @@ import './index.scss';
 import Slider from "react-slick";
 import { Link } from 'wouter';
 
+import classNames from 'classnames';
 
 function Movies({ config }) {
 
@@ -16,39 +17,46 @@ function Movies({ config }) {
         // centerPadding: "30px",
         responsive: [
             {
-              breakpoint: 1800,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-              }
+                breakpoint: 1800,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
             },
-           
-          ]
+
+        ]
     };
 
     console.log(config)
 
 
-    return <section className={`movies-block movies-block_theme_${config.id}`}>
+    return <section className={classNames({
+        "movies-block": true,
+        "movies-block_theme_movies": config.id == 'contests',
+        [`movies-block_theme_${config.id}`]: true,
+    })}
+    >
         <div className="container">
             <div className="movies__content">
                 <h3>{config.title}</h3>
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="movies__item">
-                            <img src={`https://multilandia.tv:4433/${el.image}`} className="movies__image" />
+                            <img src={`https://mland.olit.su${el.image}`} className="movies__image" />
                             {el.title && <div className="movies__title">{el.title}</div>}
                             {el.text && <div className="movies__text">{el.text}</div>}
                             {el.sub && <div className="movies__sub">{el.sub}</div>}
                         </div>
                     })}
                 </Slider>
-                {config.all_movies && <div className="movies__footer">
+                {config.all_movies ? <div className="movies__footer">
                     <Link to={config.all_movies.url} ><div className={`btn btn_${config.all_movies.style} btn_outline`}><span>{config.all_movies.label}</span></div></Link>
+                </div> : <div className="movies__footer">
+                    <div className={`btn btn_outline btn_hidden`}><span>"скрыто"</span></div>
                 </div>}
             </div>
         </div>
-    </section>
+    </section >
 }
 
 export default Movies

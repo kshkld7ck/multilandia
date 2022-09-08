@@ -30,7 +30,7 @@ function Games({ config }) {
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="games__item">
-                            <img src={`https://multilandia.tv:4433/${el.image}`} className="games__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="games__image" />
                             {el.title && <div className="games__title">{el.title}</div>}
                             {el.text && <div className="games__text">{el.text}</div>}
                             {el.sub && <div className="games__sub">{el.sub}</div>}

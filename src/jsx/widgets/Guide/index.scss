@@ -19,6 +19,18 @@
     }
     .slick-slide {
         padding: 0 10px;
+        &:first-child {
+            .guide__item {
+                .guide__time {
+                    background: linear-gradient(90deg, #a117ce 0%, #d1506a 26.49%, #f47920 100%);
+                    span {
+                        color: #fff;
+                        background: none;
+                        -webkit-text-fill-color: #fff;
+                    }
+                }
+            }
+        }
     }
     .guide__item {
         position: relative;
@@ -47,18 +59,23 @@
         }
         .guide__time {
             padding: 5px 12px;
-            background: linear-gradient(90deg, #a117ce 0%, #d1506a 26.49%, #f47920 100%);
             border-radius: 50px;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 35px;
-            text-align: center;
-            font-family: "Baloo" !important;
-            letter-spacing: 0.01em;
-            color: #fff;
             position: absolute;
             top: 25px;
             left: 25px;
+            background: #fff;
+            span {
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 35px;
+                text-align: center;
+                font-family: "Baloo" !important;
+                letter-spacing: 0.01em;
+                background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
         }
         .guide__age {
             width: 45px;
@@ -91,11 +108,11 @@
         &::-webkit-slider-thumb {
             // &::-moz-range-thumb {
             // border: 2px solid #fc5565;
-            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #F6771E;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #f6771e;
             height: 24px;
             width: 24px;
             border-radius: 15px;
-            background: #F6771E;
+            background: #f6771e;
             cursor: pointer;
             -webkit-appearance: none;
             margin-top: -10px;
@@ -107,7 +124,7 @@
         bottom: -75px;
         width: 45px;
         height: 45px;
-        background-image: url('../../../assets/images/arrowPrimary.svg');
+        background-image: url("../../../assets/images/arrowPrimary.svg");
         background-repeat: no-repeat;
         background-size: 30px 26px;
         background-position: center;
@@ -120,15 +137,15 @@
         &:active,
         &:focus {
             opacity: 1;
-            background-image: url('../../../assets/images/arrowPrimary.svg');
+            background-image: url("../../../assets/images/arrowPrimary.svg");
             background-repeat: no-repeat;
             background-size: 30px 26px;
             background-position: center;
             background-color: transparent;
         }
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
     .slick-prev {
-        transform: rotate(-180deg)
+        transform: rotate(-180deg);
     }
 }

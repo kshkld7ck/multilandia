@@ -8,7 +8,7 @@ function PromoVideo({ config }) {
     return <section className="promo-video">
         <div className="container">
             <div className="promo-video__content">
-                <img className="promo-video__item-image" src={`https://multilandia.tv:4433/${config.image}`} alt="" />
+                <img className="promo-video__item-image" src={`https://mland.olit.su/${config.image}`} alt="" />
                 <div className="promo-video__item-info">
                     <div className="promo-video__item-title">
                         {config.title}
@@ -31,7 +31,7 @@ function PromoVideo({ config }) {
                         </div>
                  
                         <Link to={el.button.url} className="btn btn_primary btn_outline">{el.button.text}</Link>
-                        <img className="banners__item-image" src={`https://multilandia.tv:4433/${el.image}`} alt="" />
+                        <img className="banners__item-image" src={`https://mland.olit.su/${el.image}`} alt="" />
                     </div>
                 })} */}
             </div>

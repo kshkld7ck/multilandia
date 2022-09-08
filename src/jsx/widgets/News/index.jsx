@@ -20,7 +20,7 @@ function News({ config }) {
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="news__item">
-                            <img src={`https://multilandia.tv:4433/${el.image}`} className="news__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
                             {el.title && <Link to={el.url} className="news__title">{el.title}</Link>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </div>
