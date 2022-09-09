@@ -70,6 +70,26 @@
             border-radius: 20px;
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
             padding: 10px;
+            position: relative;
+            .movies-page__item-age {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 5px 12px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #4d9ab5;
+                background: #fff;
+                font-family: "Baloo" !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 35px;
+            }
             .movies-page__item-image {
                 width: 100%;
                 height: 235px;

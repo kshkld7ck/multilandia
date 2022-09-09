@@ -1,4 +1,5 @@
 .banners {
+    position: relative;
     .slick-slide {
         padding: 0 15px;
         // margin: 0 15px;
@@ -51,7 +52,7 @@
     .banners__item-arrows {
         position: absolute;
         right: 150px;
-        top: calc(100% + 49px);
+        bottom: 90px;
         display: grid;
         grid-template-columns: 70px 70px;
         column-gap: 15px;

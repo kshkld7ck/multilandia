@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import './index.scss';
 import Slider from "react-slick";
@@ -9,12 +9,23 @@ import Icon3 from '../../../assets/images/obed.svg';
 import Icon4 from '../../../assets/images/night.svg';
 import AccordionIcon from '../../../assets/images/accordionButton.svg';
 function Programms({ config }) {
+    // const [activeKey, setActiveKey] = useState("0")
+    console.log(config.items.fil)
     let startDayIndex = 0;
-    console.log('dates', config.dates.forEach((el, index) => {
+    let activeKey = 0;
+    config.dates.forEach((el, index) => {
         if (el.active) {
             startDayIndex = index;
         }
-    }))
+    })
+
+    config.items.forEach((el, index) => {
+        if (el.active) {
+            activeKey = index;
+        }
+    })
+
+    console.log(activeKey)
     const settings = {
         infinite: true,
         speed: 500,
@@ -55,7 +66,7 @@ function Programms({ config }) {
     }
     return <section className="programms">
         <div className="container">
-        <h3>{config.title}</h3>
+            <h3>{config.title}</h3>
 
             <div className="programms__content">
                 <div className="programms__dates">
@@ -73,9 +84,9 @@ function Programms({ config }) {
                     </Slider>
                 </div>
                 <div className="programms__list">
-                    <Accordion defaultActiveKey="0">
+                    <Accordion alwaysOpen defaultActiveKey={activeKey.toString()}>
                         {config.items.map((el, i) => {
-                            return el.childrens?.length > 0 && <Accordion.Item eventKey={i} >
+                            return el.childrens?.length > 0 && <Accordion.Item eventKey={i.toString()} >
                                 <Accordion.Header>
                                     <div className="programms__accordion-header">
                                         <div>

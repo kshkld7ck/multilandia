@@ -20,6 +20,7 @@ function MoviesPage({ config }) {
                     {config.items.map((el) => {
                         return <Link to={el.url} className="movies-page__item" key={el.id}>
                             <img src={`https://mland.olit.su/${el.img}`} className="movies-page__item-image" />
+                            {el.age && <div className="movies-page__item-age">{el.age}</div>}
                             <div className="movies-page__item-title">{el.title}</div>
                             <Link className="movies-page__item-hashtag" to={el.hashtag.url}>{el.hashtag.title}</Link>
                         </Link>
@@ -30,7 +31,7 @@ function MoviesPage({ config }) {
                         if (el[1].name == 'search') {
                             return <Form.Group className="movies-page__search" controlId="formBasicEmail">
                                 <Form.Control type="email" placeholder="ПОИСК" />
-                                <img src={SearchIcon} alt="" className="movies-page__search-icon"/>
+                                <img src={SearchIcon} alt="" className="movies-page__search-icon" />
                             </Form.Group>
                         }
                         return <Accordion defaultActiveKey={i}>
