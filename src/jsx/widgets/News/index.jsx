@@ -9,7 +9,24 @@ function News({ config }) {
         arrow: true,
 
         slidesToScroll: 1,
-        slidesToShow: 3,
+        slidesToShow: config.id == 'heroes' ? 6 : 3,
+        responsive: [
+            {
+                breakpoint: 1800,
+                settings: {
+                    slidesToShow: config.id == 'heroes' ? 5 : 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: config.id == 'heroes' ? 4 : 3,
+                    slidesToScroll: 1,
+                }
+            },
+
+        ]
         // centerPadding: "30px",
     };
 
@@ -21,13 +38,22 @@ function News({ config }) {
                     {config.items.map((el) => {
                         return <div className="news__item">
                             <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
-                            {el.title && <Link to={el.url} className="news__title">{el.title}</Link>}
+                            {el.title && <Link href={el.url || '/'} className="news__title">{el.title}</Link>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </div>
                     })}
                 </Slider>
-                {config.all_games && <div className="news__footer">
+                {/* {config.all_games && <div className="news__footer">
                     <Link to={config.all_games.url} ><div className={`btn btn_primary btn_outline`}><span>{config.all_games.label}</span></div></Link>
+                </div>} */}
+                {config.all_games ? <div className="news__footer">
+                    <Link to={config.all_games.url}>
+                        <div className={`btn btn_${config.all_games.style} btn_outline`}>
+                            <span>{config.all_games.label}</span>
+                        </div>
+                    </Link>
+                </div> : <div className="news__footer">
+                    <div className={`btn btn_outline btn_hidden`}><span>"скрыто"</span></div>
                 </div>}
             </div>
         </div>

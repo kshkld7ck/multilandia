@@ -1,0 +1,36 @@
+.programms-movie {
+    margin-top: 100px;
+    &.programms {
+        .programms__item {
+            @media (max-width: 1799px) {
+                grid-template-columns: 105px 100px 1fr;
+            }
+            .programms__item-time {
+                text-align: center;
+                font-family: "Baloo" !important;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 20px;
+                span {
+                    color: #5b4670;
+                }
+                p {
+                    color: #a397b5;
+                    margin-bottom: 0;
+                }
+            }
+            &:first-child {
+                .programms__item-time {
+                    span,
+                    p {
+                        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

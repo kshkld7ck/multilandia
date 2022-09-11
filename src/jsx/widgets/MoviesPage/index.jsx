@@ -18,7 +18,7 @@ function MoviesPage({ config }) {
             <div className="movies-page__content">
                 <div className="movies-page__list">
                     {config.items.map((el) => {
-                        return <Link to={el.url} className="movies-page__item" key={el.id}>
+                        return <Link to={`/movies/${el.url}`} className="movies-page__item" key={el.id}>
                             <img src={`https://mland.olit.su/${el.img}`} className="movies-page__item-image" />
                             {el.age && <div className="movies-page__item-age">{el.age}</div>}
                             <div className="movies-page__item-title">{el.title}</div>

@@ -1,8 +1,4 @@
 .movies-block {
-    .btn_hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
     &_theme_movies {
         &.movies-block_theme_contests {
             background: url("../../../assets/images/contestsbg.png") no-repeat;
@@ -227,4 +223,9 @@
             }
         }
     }
+}
+
+.btn_hidden {
+    opacity: 0;
+    pointer-events: none;
 }

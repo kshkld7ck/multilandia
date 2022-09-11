@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import './index.scss';
+import useLocation from "wouter/use-location";
+
 import Slider from "react-slick";
 import Accordion from 'react-bootstrap/Accordion';
 import Icon1 from '../../../assets/images/evening.svg';
@@ -8,18 +10,42 @@ import Icon2 from '../../../assets/images/sunrise.svg';
 import Icon3 from '../../../assets/images/obed.svg';
 import Icon4 from '../../../assets/images/night.svg';
 import AccordionIcon from '../../../assets/images/accordionButton.svg';
+import Axios from "axios";
+import classNames from 'classnames';
+
 function Programms({ config }) {
+    const [location] = useLocation();
+    const [clickHandled, setClickHandled] = useState(false)
     // const [activeKey, setActiveKey] = useState("0")
+    const [items, setItems] = useState(config.items)
+    // const [activeDay, setActiveDay] = useState(config)
     console.log(config.items.fil)
     let startDayIndex = 0;
+    let activeDay = 0;
     let activeKey = 0;
     config.dates.forEach((el, index) => {
         if (el.active) {
             startDayIndex = index;
+            activeDay = index;
         }
     })
 
-    config.items.forEach((el, index) => {
+    const handleClick = (date, i) => {
+        const params = {
+            url: `${location}/${date}`
+        }
+        Axios.get(`/api/main`, { params: params }).then(function (response) {
+            if (response.data) {
+                // setData(response.data)
+                console.log(response.data)
+                setItems(response.data)
+                activeDay = i;
+                console.log('active', activeDay)
+            }
+        })
+    }
+
+    items.forEach((el, index) => {
         if (el.active) {
             activeKey = index;
         }
@@ -69,23 +95,42 @@ function Programms({ config }) {
             <h3>{config.title}</h3>
 
             <div className="programms__content">
-                <div className="programms__dates">
+                <div
+                    className={classNames({
+                        "programms__dates": true,
+                    })}
+                // className="programms__dates"
+                >
                     <Slider {...settings}>
-                        {config.dates.map((el) => {
-                            return <Link to={"/"} className={`programms__dates-item ${el.active ? 'active' : ''}`}>
-                                <div className="programms__date-heading">
-                                    {el.title}
-                                </div>
-                                <div className="programms__date-subheading">
-                                    {el.date}
-                                </div>
-                            </Link>
+                        {config.dates.map((el, i) => {
+                            {/* */ }
+                            return <>
+                                <input type="radio" onChange={() => {
+                                    setClickHandled(true)
+                                    console.log('handl', clickHandled)
+                                }} id={`programDate_${i}`} name="programDate" defaultChecked={i == activeDay} />
+                                <label
+                                    htmlFor={`programDate_${i}`}
+                                    onClick={() => handleClick(el.datetime, i)}
+                                    className={classNames({
+                                        "programms__dates-item": true,
+                                        "active": el.active && !clickHandled,
+                                    })}
+                                // className={`programms__dates-item ${el.active && !clickHandled ? 'active' : ''}`}
+                                >
+                                    <div className="programms__date-heading">
+                                        {el.title}
+                                    </div>
+                                    <div className="programms__date-subheading">
+                                        {el.date}
+                                    </div>
+                                </label></>
                         })}
                     </Slider>
                 </div>
                 <div className="programms__list">
                     <Accordion alwaysOpen defaultActiveKey={activeKey.toString()}>
-                        {config.items.map((el, i) => {
+                        {items.map((el, i) => {
                             return el.childrens?.length > 0 && <Accordion.Item eventKey={i.toString()} >
                                 <Accordion.Header>
                                     <div className="programms__accordion-header">
@@ -117,7 +162,7 @@ function Programms({ config }) {
                 </div>
 
             </div>
-        </div>
+        </div >
     </section >
 }
 

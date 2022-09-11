@@ -22,12 +22,35 @@
             width: calc(100% - 220px);
         }
     }
+    .programms__dates {
+        .slick-slide {
+            input {
+                display: none;
+                &:checked {
+                    // background: red;
+                    &+.programms__dates-item {
+                        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                        .programms__date-heading {
+                            color: #fff;
+                        }
+                        .programms__date-subheading {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            div {
+                // width: 250px;
+            }
+        }
+    }
     .programms__dates-item {
         padding: 21px 0px;
-        width: 250px;
+        // width: 250px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         /* градиент 2 */
         border-radius: 20px;
         background: #fff;
@@ -44,7 +67,7 @@
         .programms__date-heading {
             text-align: center;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 22px;
             line-height: 32px;
             text-transform: uppercase;
             color: #5b4670;

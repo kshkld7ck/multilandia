@@ -38,7 +38,7 @@ function Movies({ config }) {
     >
         <div className="container">
             <div className="movies__content">
-                <h3>{config.title}</h3>
+                <h3>{config.title} </h3>
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="movies__item">
@@ -50,7 +50,11 @@ function Movies({ config }) {
                     })}
                 </Slider>
                 {config.all_movies ? <div className="movies__footer">
-                    <Link to={config.all_movies.url} ><div className={`btn btn_${config.all_movies.style} btn_outline`}><span>{config.all_movies.label}</span></div></Link>
+                    <Link to={config.all_movies.url}>
+                        <div className={`btn btn_${config.all_movies.style} btn_outline`}>
+                            <span>{config.all_movies.label}</span>
+                        </div>
+                    </Link>
                 </div> : <div className="movies__footer">
                     <div className={`btn btn_outline btn_hidden`}><span>"скрыто"</span></div>
                 </div>}
