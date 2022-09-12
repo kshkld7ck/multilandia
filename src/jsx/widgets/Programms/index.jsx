@@ -12,10 +12,12 @@ import Icon4 from '../../../assets/images/night.svg';
 import AccordionIcon from '../../../assets/images/accordionButton.svg';
 import Axios from "axios";
 import classNames from 'classnames';
+import Preloader from '../../components/Preloader'
 
 function Programms({ config }) {
     const [location] = useLocation();
-    const [clickHandled, setClickHandled] = useState(false)
+    const [clickHandled, setClickHandled] = useState(false);
+    const [isFetching, setIsFetching] = useState(false);
     // const [activeKey, setActiveKey] = useState("0")
     const [items, setItems] = useState(config.items)
     // const [activeDay, setActiveDay] = useState(config)
@@ -31,6 +33,7 @@ function Programms({ config }) {
     })
 
     const handleClick = (date, i) => {
+        setIsFetching(true)
         const params = {
             url: `${location}/${date}`
         }
@@ -41,6 +44,7 @@ function Programms({ config }) {
                 setItems(response.data)
                 activeDay = i;
                 console.log('active', activeDay)
+                setIsFetching(false)
             }
         })
     }
@@ -129,7 +133,7 @@ function Programms({ config }) {
                     </Slider>
                 </div>
                 <div className="programms__list">
-                    <Accordion alwaysOpen defaultActiveKey={activeKey.toString()}>
+                    {isFetching ? <Preloader /> : <Accordion alwaysOpen defaultActiveKey={activeKey.toString()}>
                         {items.map((el, i) => {
                             return el.childrens?.length > 0 && <Accordion.Item eventKey={i.toString()} >
                                 <Accordion.Header>
@@ -159,6 +163,7 @@ function Programms({ config }) {
 
 
                     </Accordion>
+                    }
                 </div>
 
             </div>

@@ -32,9 +32,23 @@
                         background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
                         .programms__date-heading {
                             color: #fff;
+                            transition: 0;
                         }
                         .programms__date-subheading {
+                            // background: #fff;
                             color: #fff;
+                            transition: 0;
+                        }
+                        &:hover {
+                            .programms__date-heading,
+                            .programms__date-subheading {
+                                transition: 0;
+                                background: #fff;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-clip: text;
+                                text-fill-color: transparent;
+                            }
                         }
                     }
                 }
@@ -46,6 +60,7 @@
     }
     .programms__dates-item {
         padding: 21px 0px;
+        cursor: pointer;
         // width: 250px;
         display: flex;
         align-items: center;
@@ -55,6 +70,24 @@
         border-radius: 20px;
         background: #fff;
         box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+        &:not(.active):hover {
+            .programms__date-heading {
+                background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                transition: 0.3s;
+            }
+            .programms__date-subheading {
+                background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                transition: 0.3s;
+            }
+        }
         &.active {
             background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
             .programms__date-heading {
