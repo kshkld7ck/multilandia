@@ -1,0 +1,24 @@
+.news-list {
+    h3 {
+        font-family: "Baloo" !important;
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 70px;
+        color: #5b4670;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+}
+
+.news-list__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(33.3% - 40px));
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 40px;
+    row-gap: 40px;
+    .news__item {
+        min-height: unset;
+        height: 100%;
+    }
+}

@@ -7,9 +7,11 @@ import MoviePage from './MoviePage'
 import Movies from './Movies'
 import MoviesPage from './MoviesPage'
 import News from './News'
+import NewsList from './NewsList'
 import Programms from './Programms'
 import ProgrammsMovie from './ProgrammsMovie'
 import PromoVideo from './PromoVideo'
+import SliderWithModal from './SliderWithModal'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
 // import MainBanner from './MainBanner'
@@ -38,6 +40,8 @@ const Widgets = {
     "movies_search": MoviesPage,
     "movie": MoviePage,
     "program_movie": ProgrammsMovie,
+    "news_list": NewsList,
+    "slider_with_modal": SliderWithModal
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,
