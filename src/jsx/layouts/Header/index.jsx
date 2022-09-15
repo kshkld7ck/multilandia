@@ -17,7 +17,7 @@ function Header(props) {
         <header className="header">
             <div className="container">
                 <div className="header__content">
-                    <img src={Logo} alt="logo" className="header__logo" />
+                    <Link to="/"><img src={Logo} alt="logo" className="header__logo" /></Link>
                     <nav className="header__nav">
                         {Object.values(header.menu).map((el) => {
                             return <Link to={el.url}>{el.name}</Link>

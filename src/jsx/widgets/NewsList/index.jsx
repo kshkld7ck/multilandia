@@ -23,7 +23,7 @@ function NewsList({ config }) {
         }
 
         console.log('params', params)
-        Axios.get(`/api/main`, { params: params }).then(function (response) {
+        Axios.get(`/api/${params.url}`).then(function (response) {
             if (response.data) {
                 setItems(response.data.items)
                 console.log('data', response.data.items)
@@ -36,9 +36,9 @@ function NewsList({ config }) {
         <div className="container">
             <div className="news-list__content">
                 <h3>{config.title}</h3>
-                {config.filter.items && <SortBlock items={config.filter.items} callback={handleCallback} />}
+                {config?.filter?.items && <SortBlock items={config.filter.items} callback={handleCallback} />}
                 <div className="news-list__items">
-                    {items.map((el) => {
+                    {items?.length > 0 && items.map((el) => {
                         return <Link href={el.url || '/'} className="news__item">
                             <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
                             {el.title && <div className="news__title">{el.title}</div>}

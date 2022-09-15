@@ -32,7 +32,7 @@ function App() {
     //   if (city) {
     //     params['id_city'] = city.id
     //   }
-    Axios.get("/api/main", { params: params }).then(function (response) {
+    Axios.get(`/api${location == '/' ? '' : location}`).then(function (response) {
       if (response.data) {
         setData(response.data)
       }

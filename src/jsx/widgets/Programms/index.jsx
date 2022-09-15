@@ -34,10 +34,7 @@ function Programms({ config }) {
 
     const handleClick = (date, i) => {
         setIsFetching(true)
-        const params = {
-            url: `${location}/${date}`
-        }
-        Axios.get(`/api/main`, { params: params }).then(function (response) {
+        Axios.get(`/api/guide/${date}`).then(function (response) {
             if (response.data) {
                 // setData(response.data)
                 console.log(response.data)
