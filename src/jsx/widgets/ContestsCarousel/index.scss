@@ -1,0 +1,159 @@
+.contests-carousel {
+    padding-bottom: 100px;
+    h3 {
+        font-family: "Baloo" !important;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 56px;
+        text-transform: uppercase;
+        color: #5b4670;
+    }
+    .contests-carousel__item {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 10px 7px;
+        max-width: 500px;
+        margin-right: 40px;
+        .contests-carousel__image {
+            border-radius: 16px;
+            width: 100%;
+        }
+        display: inline-flex;
+        flex-direction: column;
+        .contests-carousel__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #5b4670;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+        .contests-carousel__text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: #5b4670;
+            padding: 0 10px;
+        }
+        .contests-carousel__counter {
+            background: linear-gradient(90deg, #733fff 0%, #f67780 100%);
+            border-radius: 20px;
+            padding: 25px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            .contests-carousel__counter-item {
+                width: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                /* identical to box height */
+                text-align: center;
+                text-transform: uppercase;
+                /* Белый */
+                color: #ffffff;
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                span {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #ffffff;
+                    text-transform: lowercase;
+                }
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 50%;
+                    /* border: 3px solid red; */
+                    position: absolute;
+                    left: -2.5px;
+                    top: -2.5px;
+                    background: rgba(255, 255, 255, 0.2);
+                }
+                .CircularProgressbar .CircularProgressbar-trail {
+                    stroke: transparent;
+                    filter: drop-shadow(-1px -1px 0px #3e68ff);
+                }
+                .CircularProgressbar .CircularProgressbar-path {
+                    stroke: #fff;
+                }
+                .CircularProgressbar .CircularProgressbar-text {
+                    fill: #fff;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 26px;
+                    transform: translate(0px, 4px);
+                }
+            }
+        }
+    }
+    .slick-list {
+        padding-bottom: 100px;
+    }
+    .slick-arrow {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        border-radius: 50px;
+        overflow: hidden;
+        position: absolute;
+        bottom: -75px !important;
+        top: unset;
+        right: unset;
+        // transform: rotate(-180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &.slick-prev {
+            left: 0px;
+            // transform: rotate(-180deg);
+            &:before {
+                transform: translate(-50%, -50%) scaleX(-1);
+            }
+        }
+        &.slick-next {
+            left: 85px;
+        }
+        &:before {
+            content: "";
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: url("../../../assets/images/arrow.svg");
+            background-size: contain;
+        }
+        &:before {
+            transition: 0.2s;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            img {
+                transform: scale(1.3);
+            }
+        }
+        &:after {
+            display: none;
+        }
+    }
+}

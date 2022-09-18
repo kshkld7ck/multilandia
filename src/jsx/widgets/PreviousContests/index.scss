@@ -1,0 +1,85 @@
+.prev-contests {
+    padding: 100px 0px;
+    h3 {
+        font-family: "Baloo" !important;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #5b4670;
+    }
+    .prev-contests__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 280px);
+        justify-content: space-between;
+        column-gap: 40px;
+        row-gap: 40px;
+        margin-top: 30px;
+        @media (max-width: 1799px) {
+            grid-template-columns: repeat(auto-fill, 250px);
+        }
+        .prev-contests__item {
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img {
+                width: 100%;
+                border-radius: 16px;
+                @media (max-width: 1799px) {
+                    height: 145px;
+                    object-fit: cover;
+                }
+            }
+            .prev-contests__title {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #5b4670;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+            .prev-contests__badge {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.01em;
+                font-family: "Baloo" !important;
+                text-transform: uppercase;
+                color: #4d9ab5;
+                background: #fff;
+                position: absolute;
+                top: 22px;
+                left: 22px;
+                border-radius: 50px;
+                padding: 5px 12px;
+            }
+            .prev-contests__text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #5b4670;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                padding: 0 10px;
+                text-overflow: ellipsis;
+            }
+            .prev-contests__date {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 23px;
+                padding: 0 10px;
+                color: #9900cc;
+                margin-top: 10px;
+            }
+        }
+    }
+}

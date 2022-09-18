@@ -15,6 +15,9 @@ import PromoVideo from './PromoVideo'
 import SliderWithModal from './SliderWithModal'
 import NewsDetail from './NewsDetail'
 import About from './About'
+import ContestsCarousel from './ContestsCarousel'
+import PreviousContests from './PreviousContests'
+import ContestsWinners from './ContestsWinners'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
 // import MainBanner from './MainBanner'
@@ -46,7 +49,10 @@ const Widgets = {
     "news_list": NewsList,
     "slider_with_modal": SliderWithModal,
     "news_detail": NewsDeatil,
-    "about": About
+    "about": About,
+    "contetst_carousel": ContestsCarousel,
+    "contetst": PreviousContests,
+    "contetst_winner": ContestsWinners
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,

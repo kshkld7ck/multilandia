@@ -1,0 +1,251 @@
+.contests-winners {
+    background: url("../../../assets/images/contestswinners.png") no-repeat;
+    padding: 70px 0px 100px 0px;
+    h3 {
+        /* 1280/Baloo/H2 */
+        font-family: "Baloo" !important;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        text-transform: uppercase;
+        color: #ffffff;
+        .contests-winners__footer {
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            .btn {
+                height: 70px;
+                position: relative;
+            }
+        }
+    }
+    .slick-slide {
+        padding: 10px;
+    }
+    .contests-winners__item {
+        background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.08) 100%);
+        box-shadow: 0px -10px 20px rgba(80, 79, 111, 0.1), inset -5px -5px 250px rgba(255, 255, 255, 0.02), 0 0 0 4px rgba(255, 255, 255, 0.5);
+        border-radius: 14px;
+        padding: 10px;
+        .contests-winners__name {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 15px;
+            @media (max-width: 1799px) {
+                height: 48px;
+            }
+        }
+        .contests-winners__votes {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            color: #9900cc;
+            margin-top: 5px;
+        }
+        .contests-winners__image {
+            border-radius: 8px;
+            img {
+                border-radius: 8px;
+                width: 100%;
+                height: 190px;
+                object-fit: cover;
+            }
+            position: relative;
+            .contests-winners__badge {
+                left: 50%;
+                position: absolute;
+                bottom: 5px;
+                transform: translateX(-50%);
+                background: #ffffff;
+                border-radius: 50px;
+                display: inline-flex;
+                padding: 2px 8px;
+                font-family: "Baloo" !important;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #4d9ab5;
+            }
+        }
+    }
+    .slick-arrow {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        border-radius: 50px;
+        overflow: hidden;
+        position: absolute;
+        bottom: -125px !important;
+        top: unset;
+        right: unset;
+        // transform: rotate(-180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &.slick-prev {
+            left: 0;
+            // transform: rotate(-180deg);
+            &:before {
+                transform: translate(-50%, -50%) scaleX(-1);
+            }
+        }
+        &.slick-next {
+            left: 85px;
+        }
+        &:before {
+            content: "";
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: url("../../../assets/images/arrow.svg");
+            background-size: contain;
+        }
+        &:before {
+            transition: 0.2s;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            img {
+                transform: scale(1.3);
+            }
+        }
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.contests-winners {
+    .rodal-dialog {
+        width: 100% !important;
+        height: min-content !important;
+        max-width: 600px;
+        background: transparent;
+        box-shadow: none;
+    }
+    .rodal-close {
+        filter: brightness(0) invert(1);
+        top: 40px !important;
+        right: 40px !important;
+    }
+}
+
+.contests-modal {
+    .contests-modal__image {
+        padding: 5px;
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        position: relative;
+        // &:before {
+        //     content: '';
+        //     width: 100%;
+        //     height: 100%;
+        //     background: url('../../../assets/images/modalBg.svg') no-repeat;
+        //     position: absolute;
+        //     z-index: -1;
+        // }
+        .contests-modal__image-item {
+            border-radius: 30px;
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+        .contests-modal__badge {
+            left: 30px;
+            position: absolute;
+            top: 30px;
+            background: #ffffff;
+            border-radius: 50px;
+            display: inline-flex;
+            padding: 2px 8px;
+            font-family: "Baloo" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #4d9ab5;
+        }
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            button {
+                width: 50px;
+                height: 50px;
+                background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+                border: 4px solid rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(40px);
+                border-radius: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img {
+                width: 20px;
+            }
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.7;
+            }
+        }
+        .arrow-left {
+            left: -70px;
+            top: 50%;
+            transform: translateY(-50%);
+            img {
+                transform: scaleX(-1);
+            }
+        }
+        .arrow-right {
+            // background: #fff;
+            // height: 390px;
+            // width: 100px;
+            border-radius: 100px;
+            right: -70px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .contests-modal__info {
+        padding: 40px;
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 30px;
+        .contests-modal__name {
+            font-family: "Baloo" !important;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #5b4670;
+            margin-bottom: 20px;
+        }
+        .contest-modal__votes {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            text-align: center;
+            color: #9900cc;
+        }
+    }
+}

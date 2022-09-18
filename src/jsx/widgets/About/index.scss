@@ -60,6 +60,9 @@
                     &:last-child {
                         margin-bottom: 25px;
                     }
+                    &.active {
+                        color: #f6771e;
+                    }
                 }
                 .about__sidebar-list {
                     &:last-child {
