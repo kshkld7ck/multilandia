@@ -5,11 +5,13 @@ import EditIcon from '../../../assets/images/edit.svg'
 import Axios from 'axios';
 import toast from 'react-hot-toast';
 import { useLocation } from "wouter";
+import Preloader from '../../components/Preloader'
 
 function Profile({ config }) {
     const [items, setItems] = useState(config.items);
     const [avatar, setAvatar] = useState(config.avatar);
     const [location, setLocation] = useLocation();
+    const [isFetching, setIsFetching] = useState(false);
 
     const handleChange = (value, itemName, title) => {
         let newItems = items;
@@ -45,6 +47,7 @@ function Profile({ config }) {
     }
 
     const changeAvatar = (event) => {
+        setIsFetching(true)
         let headers = {
             headers: {
                 enctype: "application/x-www-form-urlencoded"
@@ -58,8 +61,11 @@ function Profile({ config }) {
                 // if (res.data?.img) {
                 toast.success("Аватар изменен")
                 setAvatar(res.data?.img)
+                setIsFetching(false)
+
                 // }
             }).catch(err => {
+                setIsFetching(false)
                 toast.error("Произошла ошибка")
             })
     }
@@ -76,7 +82,7 @@ function Profile({ config }) {
     }
     return <section className="profile">
         <div className="container">
-            <div className="profile__content">
+            {isFetching ? <Preloader /> : <div className="profile__content">
                 <div className="profile__image">
 
                     <img src={`https://mland.olit.su/${avatar}`} className="profile__image-item" />
@@ -95,10 +101,10 @@ function Profile({ config }) {
                             </Form.Group>
                         })}
                     </div>
-                    <button className="btn btn_white btn_outline" onClick={()=> logOut()}>Выйти из профиля</button>
+                    <button className="btn btn_white btn_outline" onClick={() => logOut()}>Выйти из профиля</button>
                 </div>
 
-            </div>
+            </div>}
 
         </div>
     </section>
