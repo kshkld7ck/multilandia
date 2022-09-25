@@ -6,7 +6,7 @@ function Router(data) {
     return (
         <>
             <Layout data={data}>
-                {data?.data?.widgets.map((el) => {
+                {data?.data?.widgets?.map((el) => {
                     const Component = Widgets[el.kind];
                     if (Component) {
                         return <Component config={el} />

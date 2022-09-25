@@ -1,0 +1,24 @@
+.contests-winners {
+    &_without_bg {
+        padding-top: 0;
+        background: transparent;
+        .fav-contests__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .contests-winners__item {
+                width: 165px;
+                background: rgba(255, 255, 255, 0.5);
+                .contests-winners__name {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 24px;
+                    /* or 133% */
+                    text-transform: uppercase;
+                    /* черный */
+                    color: #5b4670;
+                }
+            }
+        }
+    }
+}

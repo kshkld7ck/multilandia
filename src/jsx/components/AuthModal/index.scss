@@ -1,0 +1,74 @@
+.auth-modal-wrapper .rodal-dialog {
+    width: 100% !important;
+    height: min-content !important;
+    max-width: 1130px;
+    background: rgb(239, 225, 242);
+    padding: 60px 90px 60px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+    @media (max-width: 1799px) {
+        max-width: 900px;
+        padding: 50px 15px 50px 50px;
+    }
+    &:after {
+        content: "";
+        width: 280px;
+        height: 460px;
+        background: url('../../../assets/images/authFoxy.svg') no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: -100px;
+        top: 50%;
+        pointer-events: none;
+        transform: translateY(-50%);
+        // z-index: -1;
+    }
+    .rodal-close:before,
+    .rodal-close:after {
+        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+        width: 23px;
+        height: 3px;
+    }
+    .rodal-close {
+        width: 23px;
+        height: 23px;
+        right: 30px;
+        top: 30px;
+    }
+    .auth-modal__content {
+        h3 {
+            font-family: "Baloo" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 30px;
+            /* identical to box height, or 83% */
+            text-align: center;
+            text-transform: uppercase;
+            /* черный */
+            color: #5b4670;
+            margin-bottom: 20px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            /* identical to box height, or 133% */
+            text-align: center;
+            /* черный */
+            color: #5b4670;
+            margin-bottom: 60px;
+        }
+        .auth-modal__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 200px;
+            margin: 0 auto;
+            background: url("../../../assets/images/cloud.svg") no-repeat;
+            background-size: contain;
+            margin-bottom: 100px
+        }
+    }
+}

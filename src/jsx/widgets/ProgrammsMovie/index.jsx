@@ -4,7 +4,7 @@ import './index.scss';
 function ProgrammsMovie({ config }) {
     return <section className="programms programms-movie">
         <div className="container">
-            <h3>{config.title}</h3>
+            {config.title && <h3>{config.title}</h3>}
             <div className="programms__list">
                 {config.items.map((el) => {
                     return <div className={`programms__item ${el.active ? 'active' : ''}`} key={el.id}>

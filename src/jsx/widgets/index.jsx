@@ -18,6 +18,10 @@ import About from './About'
 import ContestsCarousel from './ContestsCarousel'
 import PreviousContests from './PreviousContests'
 import ContestsWinners from './ContestsWinners'
+import ProfileTabs from './ProfileTabs'
+import Profile from './Profile'
+import FavoriteContests from './FavoriteContests'
+import ProfileFavorites from './ProfileFavorites'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
 // import MainBanner from './MainBanner'
@@ -52,7 +56,11 @@ const Widgets = {
     "about": About,
     "contetst_carousel": ContestsCarousel,
     "contetst": PreviousContests,
-    "contetst_winner": ContestsWinners
+    "contetst_winner": ContestsWinners,
+    "prfile_tabs": ProfileTabs,
+    "profile": Profile,
+    "prfile_favorite_contests": FavoriteContests,
+    "prfile_favorite_movies": ProfileFavorites
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,

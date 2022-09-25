@@ -20,7 +20,7 @@
         //     margin-bottom: 0;
         // }
         .accordion-button {
-            padding: 20px 30px;
+            padding: 20px 20px;
             background: #ffffff;
             backdrop-filter: blur(20px);
             /* Note: backdrop-filter has minimal browser support */
@@ -41,6 +41,7 @@
             }
             &:after {
                 background-image: url("../../../assets/images/filtersAccordionToggle.svg") !important;
+                background-position: center;
             }
         }
     }
@@ -118,6 +119,7 @@
             }
             .movies-page__item-hashtag {
                 padding: 0 15px;
+                display: block;
                 font-weight: 500;
                 font-size: 20px;
                 line-height: 29px;
@@ -139,7 +141,7 @@
             transform: translateY(-50%);
         }
         .form-control {
-            padding: 20px 30px;
+            padding: 20px 20px;
             border-radius: 20px;
             border: none;
             font-weight: 500;
