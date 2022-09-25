@@ -4,10 +4,13 @@ import Form from 'react-bootstrap/Form';
 import EditIcon from '../../../assets/images/edit.svg'
 import Axios from 'axios';
 import toast from 'react-hot-toast';
+import { useLocation } from "wouter";
 
 function Profile({ config }) {
     const [items, setItems] = useState(config.items);
-    const [avatar, setAvatar] = useState(config.avatar)
+    const [avatar, setAvatar] = useState(config.avatar);
+    const [location, setLocation] = useLocation();
+
     const handleChange = (value, itemName, title) => {
         let newItems = items;
 
@@ -53,14 +56,24 @@ function Profile({ config }) {
         Axios.post(`/api/user/change-avatar`, data, headers)
             .then(res => {
                 // if (res.data?.img) {
-                    toast.success("Аватар изменен")
-                    setAvatar(res.data?.img)
+                toast.success("Аватар изменен")
+                setAvatar(res.data?.img)
                 // }
             }).catch(err => {
                 toast.error("Произошла ошибка")
             })
     }
 
+    const logOut = () => {
+        Axios.get(`/api/user/logout`)
+            .then(res => {
+                if (res.data) {
+                    setLocation('/')
+                }
+            }).catch(err => {
+                toast.error("Произошла ошибка")
+            })
+    }
     return <section className="profile">
         <div className="container">
             <div className="profile__content">
@@ -71,17 +84,20 @@ function Profile({ config }) {
                     <input type="file" id="avatar" onChange={(event) => changeAvatar(event)} />
                 </div>
                 <div className="profile__info">
-                    {Object.entries(items).map((el, i) => {
-                        console.log('el', el[1])
-                        return <Form.Group className="profile__info-item" controlId={`${el[1].title}_${i}`}>
-                            {el[1].title && <Form.Label>{el[1].title}</Form.Label>}
+                    <div className="profile__info-items">
+                        {Object.entries(items).map((el, i) => {
+                            console.log('el', el[1])
+                            return <Form.Group className="profile__info-item" controlId={`${el[1].title}_${i}`}>
+                                {el[1].title && <Form.Label>{el[1].title}</Form.Label>}
 
-                            <Form.Control type="text" placeholder={el[1].title} defaultValue={el[1].value} onChange={(e) => handleChange(e.target.value, el[0], el[1].title)} />
-                            <img onClick={() => handleSubmit()} src={EditIcon} alt="" className="form-control__icon" />
-                        </Form.Group>
-                    })}
-
+                                <Form.Control type="text" placeholder={el[1].title} defaultValue={el[1].value} onChange={(e) => handleChange(e.target.value, el[0], el[1].title)} />
+                                <img onClick={() => handleSubmit()} src={EditIcon} alt="" className="form-control__icon" />
+                            </Form.Group>
+                        })}
+                    </div>
+                    <button className="btn btn_white btn_outline" onClick={()=> logOut()}>Выйти из профиля</button>
                 </div>
+
             </div>
 
         </div>

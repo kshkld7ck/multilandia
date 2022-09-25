@@ -19,7 +19,7 @@
             color: #fff;
         }
         &.btn_outline {
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, .5);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
         }
     }
     &_white {
@@ -27,6 +27,8 @@
         // backdrop-filter: blur(40px);
         border-radius: 50px;
         border: none;
+        color: #f6771e;
+        border: 3px solid #f6771e;
         span {
             background: -webkit-linear-gradient(90deg, #a117ce 0%, #d1506a 26.49%, #f47920 100%);
             -webkit-background-clip: text;
@@ -36,8 +38,9 @@
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
         }
         &:hover {
-            background: #fff;
-            color: inherit;
+            background: #f6771e;
+            color: #fff;
+            border-color: #fff;
         }
     }
     &:hover {

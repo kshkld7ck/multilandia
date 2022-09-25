@@ -10,6 +10,7 @@
         }
     }
     .header__logo {
+        cursor: pointer;
         @media (max-width: 1800px) {
             width: 220px;
         }
@@ -38,7 +39,7 @@
             box-shadow: 0 0 0 2px #f6771e inset, 0 0 0 2px #fff;
             transition: 0.2s;
             @media (max-width: 1800px) {
-                right: 170px;
+                right: 160px;
             }
             img {
                 cursor: pointer;

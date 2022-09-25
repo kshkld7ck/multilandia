@@ -73,4 +73,13 @@
             background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
         }
     }
+    .profile__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        .btn {
+            height: 70px;
+        }
+    }
 }

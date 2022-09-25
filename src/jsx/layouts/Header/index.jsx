@@ -39,7 +39,7 @@ function Header(props) {
                 </div>
             </div>
         </header>
-        <div className="auth-modal-wrapper"><AuthModal visible={visible} onClose={() => handleClose()} /></div>
+        <div className="auth-modal-wrapper"><AuthModal header={header} visible={visible} onClose={() => handleClose()} /></div>
     </>
 }
 
