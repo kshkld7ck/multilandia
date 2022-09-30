@@ -22,6 +22,8 @@ import ProfileTabs from './ProfileTabs'
 import Profile from './Profile'
 import FavoriteContests from './FavoriteContests'
 import ProfileFavorites from './ProfileFavorites'
+import ContestItem from './ContestItem'
+import ContestsUsers from './ContestUsers'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
 // import MainBanner from './MainBanner'
@@ -54,13 +56,15 @@ const Widgets = {
     "slider_with_modal": SliderWithModal,
     "news_detail": NewsDeatil,
     "about": About,
-    "contetst_carousel": ContestsCarousel,
-    "contetst": PreviousContests,
-    "contetst_winner": ContestsWinners,
+    "contest_carousel": ContestsCarousel,
+    "contest": PreviousContests,
+    "contest_winner": ContestsWinners,
     "prfile_tabs": ProfileTabs,
     "profile": Profile,
     "prfile_favorite_contests": FavoriteContests,
-    "prfile_favorite_movies": ProfileFavorites
+    "prfile_favorite_movies": ProfileFavorites,
+    "contest_detail": ContestItem,
+    "contest_users": ContestsUsers,
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,

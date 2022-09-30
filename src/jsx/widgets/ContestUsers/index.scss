@@ -1,0 +1,39 @@
+.contests-winners_without_bg {
+    h3 {
+        font-family: "Baloo" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        /* identical to box height, or 100% */
+        text-transform: uppercase;
+        /* черный */
+        color: #5b4670;
+        margin-bottom: 32px;
+    }
+    &.contests-winners_users {
+        .fav-contests__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 250px);
+            column-gap: 35px;
+            row-gap: 35px;
+            .contests-winners__item {
+                width: 250px;
+                .contests-winners__name {
+                    min-height: 48px;
+                }
+                .btn {
+                    font-size: 15px;
+                    line-height: 24px;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .contests-modal .contests-modal__info {
+        .btn {
+            margin-top: 20px;
+        }
+    }
+}

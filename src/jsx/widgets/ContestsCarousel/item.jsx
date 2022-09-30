@@ -36,12 +36,17 @@ const getReturnValues = (countDown) => {
 export { useCountdown };
 
 export default function RenderItem(el) {
+    let now = +new Date();
+    let configDate = +new Date(el.end)
+    console.log('qwe', now > configDate)
+    console.log('qwe', now)
+    console.log('qwe', configDate)
     const [days, hours, minutes, seconds] = useCountdown(el.end);
     return <Link to={el.url} className="contests-carousel__item" key={el.id}>
         <img src={`https://mland.olit.su${el.image}`} className="contests-carousel__image" />
         {el.title && <div className="contests-carousel__title">{el.title}</div>}
         {el.text && <div className="contests-carousel__text">{el.text}</div>}
-        {el.end && <div className="contests-carousel__counter">
+        {el.end && now < configDate && <div className="contests-carousel__counter">
             <div className="contests-carousel__counter-item">
                 <CircularProgressbar value={100 * days / 30} text={hours} className="circle-bar"
                     styles={buildStyles({

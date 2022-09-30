@@ -9,7 +9,7 @@ import Arrow from '../../../assets/images/arrow.svg';
 function ContestsWinners({ config }) {
     const [item, setItem] = useState({});
     const [visible, setVisible] = useState(false);
-
+console.log('www')
     const [itemIndex, setItemIndex] = useState(0);
     const handleOpen = (item, index) => {
         setVisible(true);

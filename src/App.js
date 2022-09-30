@@ -37,6 +37,11 @@ function App() {
         setData(response.data)
       }
     })
+    Axios.get(`/api/user/edit`).then(function (response) {
+      if (response.data) {
+        
+      }
+    })
   }, [location])
 
   return (<>      
@@ -47,7 +52,6 @@ function App() {
     </div>
     <div><Toaster position="top-right"
       reverseOrder={false} /></div>
-
   </>
   );
 }

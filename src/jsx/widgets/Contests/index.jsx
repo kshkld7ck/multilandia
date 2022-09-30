@@ -28,7 +28,6 @@ function Contests({ config }) {
 
     console.log(config)
 
-
     return <section className={`movies-block movies-block_theme_movies movies-block_theme_contests`}>
         <div className="container">
             <div className="movies__content">
