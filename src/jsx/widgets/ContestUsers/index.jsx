@@ -29,7 +29,7 @@ function ContestsUsers({ config }) {
                 // })
                 // console.log(newItems)
                 setItems(response.data.items)
-                setItem(response.data.items.find((el) => el.id == id))
+                response.data.items.find((el) => el.id == id) && setItem(response.data.items.find((el) => el.id == id))
             }
         })
     }
@@ -52,13 +52,13 @@ function ContestsUsers({ config }) {
                 setItems(response.data.items)
                 // console.log('id', response.data.items.find((el) => el.id == id))
                 // console.log('ids', votedIds)
-                setItem(response.data.items.find((el) => el.id == id))
+                response.data.items.find((el) => el.id == id) && setItem(response.data.items.find((el) => el.id == id))
             }
         })
     }
     const renderButton = (vote, id) => {
         console.log('votedIds.includes', votedIds.includes(id))
-        if ((vote === 1) || (votedIds.includes(id))) {
+        if ((vote === 1)) {
             return <button className="btn btn_white btn_rounded btn_outline" onClick={() => deleteVote(id)}>Отменить голос</button>
         } else if (vote === 0) {
             return <button className="btn btn_white btn_rounded btn_outline" onClick={() => voteFor(id)}>Проголосовать</button>
@@ -80,7 +80,7 @@ function ContestsUsers({ config }) {
                             {el.name && <div className="contests-winners__name">{el.name}</div>}
                             {el.voites && <div className="contests-winners__votes">Голосов: {el.voites}</div>}
                         </div>
-                        {renderButton(el.vote, el.id)}
+                        {!!el.button && renderButton(el.vote, el.id)}
                     </div>
                 })}
             </div>
@@ -88,7 +88,7 @@ function ContestsUsers({ config }) {
         <Rodal visible={visible} onClose={() => handleClose()}>
             <div className="contests-modal">
                 <div className="contests-modal__image">
-                    <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />
+                {item?.img && <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />}
                     {/* <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div> */}
 
                     <div className={`arrow-left ${itemIndex == 0 ? 'disabled' : ''}`}>
@@ -116,7 +116,7 @@ function ContestsUsers({ config }) {
                     {item.voites && <div className="contest-modal__votes">
                         Голосов: {item.voites}
                     </div>}
-                    {renderButton(item.vote, item.id)}
+                    {!!item.button && renderButton(item.vote, item.id)}
                 </div>
             </div>
         </Rodal>

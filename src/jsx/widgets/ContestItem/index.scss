@@ -147,7 +147,7 @@
             }
         }
     }
-    .rodal-dialog {
+    .event-modal__wrapper .rodal-dialog {
         width: 100% !important;
         height: min-content !important;
         max-width: 850px;
@@ -263,6 +263,35 @@
             color: #fff;
             opacity: 0.7;
             pointer-events: none;
+        }
+    }
+    .success-event-modal__wrapper .rodal-dialog {
+        width: 100% !important;
+        max-width: 746px;
+        height: 500px !important;
+        background: linear-gradient(0deg, rgba(255, 243, 232, 0.5), rgba(255, 243, 232, 0.5)), #ffffff;
+        border-radius: 20px;
+        padding: 60px 150px;
+        display: flex;
+        align-items: center;
+        .rodal-close:before,
+        .rodal-close:after {
+            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            width: 23px;
+            height: 3px;
+        }
+        h3 {
+            font-size: 36px;
+            line-height: 30px;
+            text-align: center;
+            margin-top: 70px
+        }
+        .success-event-modal__image {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            margin-left: -50px;
         }
     }
 }

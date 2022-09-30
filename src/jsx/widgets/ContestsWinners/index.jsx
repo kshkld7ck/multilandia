@@ -9,7 +9,7 @@ import Arrow from '../../../assets/images/arrow.svg';
 function ContestsWinners({ config }) {
     const [item, setItem] = useState({});
     const [visible, setVisible] = useState(false);
-console.log('www')
+    console.log('www')
     const [itemIndex, setItemIndex] = useState(0);
     const handleOpen = (item, index) => {
         setVisible(true);
@@ -62,11 +62,11 @@ console.log('www')
             <Rodal visible={visible} onClose={() => handleClose()}>
                 <div className="contests-modal">
                     <div className="contests-modal__image">
-                        <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />
+                        {item?.img && <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />}
                         <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div>
 
                         <div className={`arrow-left ${itemIndex == 0 ? 'disabled' : ''}`}>
-                        <button onClick={() => {
+                            <button onClick={() => {
                                 setItem(config.items[itemIndex - 1])
                                 setItemIndex(itemIndex - 1)
                             }}>

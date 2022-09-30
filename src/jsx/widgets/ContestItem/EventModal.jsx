@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import Form from 'react-bootstrap/Form';
 
 function EventModal(props) {
-    const { visible, handleClose, config } = props;
+    const { visible, handleClose, handleSuccess, config } = props;
     const [file, setFile] = useState(null);
     const [checked, setChecked] = useState(true)
     const [items, setItems] = useState({
@@ -54,7 +54,7 @@ function EventModal(props) {
             .then(res => {
                 console.log(res.data);
                 toast.success("Заявка отправлена")
-                handleClose()
+                handleSuccess()
 
             })
     }
@@ -104,10 +104,11 @@ function EventModal(props) {
                     name={'checked'}
                     type="checkbox"
                     value={checked}
+                    defaultChecked={checked}
                     id={`checked`}
                     onChange={e => setChecked(e.target.checked)}
                 />
-                    <label htmlFor="checked" className="form-check-label">
+                    <label htmlFor="checked"  className="form-check-label">
                         Нажимая кнопку “Отправить” вы соглашаетесь с <a>правилами конкурса</a>
                     </label>
                 </div>

@@ -37,11 +37,11 @@ function App() {
         setData(response.data)
       }
     })
-    Axios.get(`/api/user/edit`).then(function (response) {
-      if (response.data) {
+    // Axios.get(`/api/user/edit`).then(function (response) {
+    //   if (response.data) {
         
-      }
-    })
+    //   }
+    // })
   }, [location])
 
   return (<>      

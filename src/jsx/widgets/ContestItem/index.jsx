@@ -3,7 +3,8 @@ import './index.scss';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import EventModal from './EventModal';
-
+import Rodal from 'rodal';
+import Foxy from '../../../assets/images/eventsuccess.svg'
 const useCountdown = (targetDate) => {
     const countDownDate = new Date(targetDate).getTime();
 
@@ -38,10 +39,18 @@ export { useCountdown };
 function ContestItem({ config }) {
     const [days, hours, minutes, seconds] = useCountdown(config.date_end);
     const [visible, setVisible] = useState(false);
+    const [successVisible, setSuccessVisible] = useState(false);
     const handleOpen = () => {
         setVisible(true);
     }
+
     const handleClose = () => { setVisible(false) }
+    const handleSuccessClose = () => { setSuccessVisible(false) }
+    const handleSuccess = () => {
+        setSuccessVisible(true);
+        handleClose()
+    }
+
     let now = +new Date();
     let configDate = +new Date(config.date_end)
     return <seciton className="contest-item">
@@ -89,7 +98,17 @@ function ContestItem({ config }) {
                 </div>
             </div>
             <div className="contest-item__text" dangerouslySetInnerHTML={{ __html: config.text }} />
-            {visible && <EventModal handleClose={() => handleClose()} config={config} />}
+            <div className="event-modal__wrapper">
+                {visible && <EventModal handleClose={() => handleClose()} handleSuccess={() => handleSuccess()} config={config} />}
+            </div>
+            <div className="success-event-modal__wrapper">
+                {successVisible && <Rodal visible={true} onClose={() => handleSuccessClose()}>
+                    <img src={Foxy} className="success-event-modal__image" alt="" />
+                    <div className="event-modal">
+                        <h3>Ваша заявка успешно отправлена</h3>
+                    </div>
+                </Rodal>}
+            </div>
         </div>
     </seciton>
 }

@@ -36,8 +36,7 @@ function FavoriteContests({ config }) {
         <Rodal visible={visible} onClose={() => handleClose()}>
             <div className="contests-modal">
                 <div className="contests-modal__image">
-                    <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />
-                    {/* <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div> */}
+                {item?.img && <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />}                    {/* <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div> */}
 
                     <div className={`arrow-left ${itemIndex == 0 ? 'disabled' : ''}`}>
                         <button onClick={() => {
