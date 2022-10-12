@@ -17,16 +17,37 @@
             grid-template-columns: repeat(auto-fill, 250px);
             column-gap: 35px;
             row-gap: 35px;
+            @media (max-width: 991px) {
+                column-gap: 20px;
+                row-gap: 20px;
+                grid-template-columns: repeat(auto-fill, calc(33.3% - 20px));
+            }
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(auto-fill, calc(50% - 10px));
+            }
+            @media (max-width: 450px) {
+                grid-template-columns: 1fr;
+            }
             .contests-winners__item {
                 width: 250px;
+                @media (max-width: 991px) {
+                    width: 100%;
+                }
                 .contests-winners__name {
                     min-height: 48px;
+                    @media (max-width: 450px) {
+                        min-height: unset;
+                    }
                 }
                 .btn {
                     font-size: 15px;
                     line-height: 24px;
                     width: 100%;
                     margin-top: 10px;
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                        height: 46px;
+                    }
                 }
             }
         }
@@ -34,6 +55,10 @@
     .contests-modal .contests-modal__info {
         .btn {
             margin-top: 20px;
+            @media (max-width: 767px) {
+                font-size: 16px;
+                height: 46px;
+            }
         }
     }
 }

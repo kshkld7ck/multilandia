@@ -11,6 +11,7 @@ import Form from 'react-bootstrap/Form';
 import SearchIcon from '../../../assets/images/search.svg'
 function MoviesPage({ config }) {
     const [filters, setFilters] = useState(config.filters)
+    const [active, setActive] = useState(false);
     return <section className="movies-page">
         <div className="container">
             <h3>{config.title}</h3>
@@ -26,7 +27,7 @@ function MoviesPage({ config }) {
                         </Link>
                     })}
                 </div>
-                <div className="movies-page__filters">
+                <div className={`movies-page__filters ${active ? "active" : ""}`}>
                     {Object.entries(filters).map((el, i) => {
                         if (el[1].name == 'search') {
                             return <Form.Group className="movies-page__search" controlId="formBasicEmail">

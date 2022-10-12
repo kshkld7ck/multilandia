@@ -3,6 +3,12 @@
     grid-template-columns: 320px minmax(min-content, 350px);
     align-items: flex-start;
     column-gap: 70px;
+    @media (max-width: 991px) {
+        grid-template-columns: 190px minmax(min-content, 350px);
+    }
+    @media (max-width:767px) {
+        grid-template-columns: 1fr;
+    }
     .form-label {
         font-weight: 400;
         font-size: 18px;
@@ -14,6 +20,7 @@
     }
     .profile__image {
         background: #fff;
+        border-radius: 16px;
         img {
             width: 100%;
             border-radius: 16px;
@@ -32,12 +39,31 @@
             // width: 24px;
             padding: 10px;
             border-radius: 16px;
-            border: 2px solid #f6771e;
-            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            border: 2px solid #5772f7;
+            background: #5772f7;
             img {
                 border-radius: 0;
                 box-shadow: none;
             }
+            @media (max-width: 991px) {
+                right: 3px;
+                /* top: 50%; */
+                /* margin-top: -3px; */
+                border-radius: 16px;
+                width: 40px;
+                padding: 0;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 15px;
+                }
+            }
+        }
+        @media (max-width:767px) {
+            max-width: 50%;
+            margin-bottom: 20px;
         }
     }
     .form-control {
@@ -56,6 +82,18 @@
             border-color: rgba(165, 221, 244, 1);
             box-shadow: none;
         }
+        @media (max-width: 991px) {
+            padding: 10px 60px 10px 10px;
+            font-size: 15px;
+        }
+    }
+    .form-label {
+        @media (max-width: 991px) {
+            font-size: 15px;
+        }
+    }
+    .profile__info-items {
+        margin-bottom: 20px;
     }
     .profile__info-item {
         position: relative;
@@ -69,8 +107,18 @@
             // width: 24px;
             padding: 10px;
             border-radius: 16px;
-            border: 2px solid #f6771e;
-            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            border: 2px solid #5772f7;
+            background: #5772f7;
+            @media (max-width: 991px) {
+                right: 3px;
+                top: 50%;
+                margin-top: -3px;
+                border-radius: 16px;
+                width: 40px;
+            }
+            @media (max-width:767px) {
+                margin-top: -2px;
+            }
         }
     }
     .profile__info {
@@ -80,6 +128,10 @@
         height: 100%;
         .btn {
             height: 70px;
+            @media (max-width: 991px) {
+                height: 46px;
+                font-size: 16px;
+            }
         }
     }
 }

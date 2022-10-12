@@ -21,16 +21,25 @@
             padding: 20px;
         }
         @media (max-width: 1200px) {
-            padding: 20px 10px
+            padding: 20px 10px;
+        }
+        @media (max-width: 991px) {
+            padding: 15px;
+            white-space: nowrap;
+        }
+        @media (max-width: 767px) {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 20px;
         }
         &:last-child {
             margin-right: 0;
         }
         &:hover {
-            color: #fc5565;
+            color: #f47456;
         }
         &.active {
-            background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+            background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
             color: #fff;
             &:hover {
                 color: #fff;
@@ -43,6 +52,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 991px) {
+        overflow-x: auto;
+        margin: 0 -20px;
+        padding: 5px 0px;
+        padding-left: 20px;
+    }
+    @media (max-width: 767px) {
+        flex-direction: row-reverse;
+    }
 }
 
 .sort-block__search {
@@ -51,12 +69,18 @@
     border-radius: 20px;
     margin-bottom: 40px;
     position: relative;
+    margin-left: 20px;
     .sort-block__search-icon {
         position: absolute;
         right: 30px;
         top: 50%;
         transform: translateY(-50%);
+        @media (max-width: 991px) {
+            position: static;
+            transform: none;
+        }
     }
+    transition: .2s;
     .form-control {
         padding: 20px 30px;
         border-radius: 20px;
@@ -67,6 +91,7 @@
         line-height: 26px;
         text-transform: uppercase;
         color: #5b4670;
+        transition: .2s;
         @media (max-width: 1799px) {
             font-size: 16px;
             line-height: 23px;
@@ -74,6 +99,36 @@
         }
         &:focus {
             box-shadow: none;
+        }
+        @media (max-width: 991px) {
+            padding: 0;
+            width: 0;
+        }
+    }
+    @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+    @media (max-width: 767px) {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    &.active {
+        transition: .2s;
+        min-width: 300px;
+        justify-content: space-between;
+        @media (max-width: 991px) {
+            .form-control {
+                padding: 10px 15px;
+                width: 230px;
+            }
+            .sort-block__search-icon {
+                margin-right: 10px;
+            }
         }
     }
 }

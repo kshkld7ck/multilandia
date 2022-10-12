@@ -34,6 +34,19 @@ function Banners({ config }) {
         slidesToScroll: 1,
         slidesToShow: 1,
         centerPadding: "30px",
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+
+
+                }
+            },
+
+        ]
     };
     return <section className="banners">
         <div className="banners__content">

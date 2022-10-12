@@ -7,49 +7,49 @@
 @import "./components/container";
 @import "./components/btn";
 @import "./components/link";
-@import "../../../node_modules/slick-carousel/slick/slick.css";
 @import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/slick-carousel/slick/slick.css";
 @import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 @font-face {
-    font-family: 'Zen Maru Gothic';
-    src: url('../fonts/ZenMaruGothic-Black.eot');
-    src: local('Zen Maru Gothic Black'), local('ZenMaruGothic-Black'), url('../fonts/ZenMaruGothic-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Black.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Black.woff') format('woff'), url('../fonts/ZenMaruGothic-Black.ttf') format('truetype');
+    font-family: "Zen Maru Gothic";
+    src: url("../fonts/ZenMaruGothic-Black.eot");
+    src: local("Zen Maru Gothic Black"), local("ZenMaruGothic-Black"), url("../fonts/ZenMaruGothic-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/ZenMaruGothic-Black.woff2") format("woff2"), url("../fonts/ZenMaruGothic-Black.woff") format("woff"), url("../fonts/ZenMaruGothic-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Zen Maru Gothic';
-    src: url('../fonts/ZenMaruGothic-Bold.eot');
-    src: local('Zen Maru Gothic Bold'), local('ZenMaruGothic-Bold'), url('../fonts/ZenMaruGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Bold.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Bold.woff') format('woff'), url('../fonts/ZenMaruGothic-Bold.ttf') format('truetype');
+    font-family: "Zen Maru Gothic";
+    src: url("../fonts/ZenMaruGothic-Bold.eot");
+    src: local("Zen Maru Gothic Bold"), local("ZenMaruGothic-Bold"), url("../fonts/ZenMaruGothic-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ZenMaruGothic-Bold.woff2") format("woff2"), url("../fonts/ZenMaruGothic-Bold.woff") format("woff"), url("../fonts/ZenMaruGothic-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Zen Maru Gothic';
-    src: url('../fonts/ZenMaruGothic-Light.eot');
-    src: local('Zen Maru Gothic Light'), local('ZenMaruGothic-Light'), url('../fonts/ZenMaruGothic-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Light.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Light.woff') format('woff'), url('../fonts/ZenMaruGothic-Light.ttf') format('truetype');
+    font-family: "Zen Maru Gothic";
+    src: url("../fonts/ZenMaruGothic-Light.eot");
+    src: local("Zen Maru Gothic Light"), local("ZenMaruGothic-Light"), url("../fonts/ZenMaruGothic-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ZenMaruGothic-Light.woff2") format("woff2"), url("../fonts/ZenMaruGothic-Light.woff") format("woff"), url("../fonts/ZenMaruGothic-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Zen Maru Gothic';
-    src: url('../fonts/ZenMaruGothic-Medium.eot');
-    src: local('Zen Maru Gothic Medium'), local('ZenMaruGothic-Medium'), url('../fonts/ZenMaruGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Medium.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Medium.woff') format('woff'), url('../fonts/ZenMaruGothic-Medium.ttf') format('truetype');
+    font-family: "Zen Maru Gothic";
+    src: url("../fonts/ZenMaruGothic-Medium.eot");
+    src: local("Zen Maru Gothic Medium"), local("ZenMaruGothic-Medium"), url("../fonts/ZenMaruGothic-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ZenMaruGothic-Medium.woff2") format("woff2"), url("../fonts/ZenMaruGothic-Medium.woff") format("woff"), url("../fonts/ZenMaruGothic-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Zen Maru Gothic';
-    src: url('../fonts/ZenMaruGothic-Regular.eot');
-    src: local('Zen Maru Gothic Regular'), local('ZenMaruGothic-Regular'), url('../fonts/ZenMaruGothic-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ZenMaruGothic-Regular.woff2') format('woff2'), url('../fonts/ZenMaruGothic-Regular.woff') format('woff'), url('../fonts/ZenMaruGothic-Regular.ttf') format('truetype');
+    font-family: "Zen Maru Gothic";
+    src: url("../fonts/ZenMaruGothic-Regular.eot");
+    src: local("Zen Maru Gothic Regular"), local("ZenMaruGothic-Regular"), url("../fonts/ZenMaruGothic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ZenMaruGothic-Regular.woff2") format("woff2"), url("../fonts/ZenMaruGothic-Regular.woff") format("woff"), url("../fonts/ZenMaruGothic-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -60,8 +60,8 @@
 }
 
 @font-face {
-    font-family: 'Baloo';
-    src: url('../fonts/../fonts/baloo-cyrillic.ttf');
+    font-family: "Baloo";
+    src: url("../fonts/../fonts/baloo-cyrillic.ttf");
 }
 
 h1,
@@ -70,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Baloo" !important
+    font-family: "Baloo" !important;
 }
 
 body,
@@ -117,5 +117,45 @@ h3 {
 
 body {
     // background: url('../../assets/images/bg.svg');
-    background: linear-gradient(0deg, #FFEDDC, #FFEDDC), #FFFFFF, ;
+    background: rgb(237, 218, 250);
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    section {
+        h3 {
+            @media (max-width: 991px) {
+                font-size: 30px !important;
+                line-height: 30px !important;
+            }
+            @media (max-width: 767px) {
+                font-size: 24px !important;
+                line-height: 24px !important;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.page {
+    @media (max-width: 991px) {
+        padding-top: 80px;
+    }
+    @media (max-width: 767px) {}
+}
+
+.hidden_md {
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none;
+    }
+}
+
+.hidden_lg {
+    @media (min-width: 992px) {
+        display: none;
+    }
 }

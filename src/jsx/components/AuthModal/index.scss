@@ -10,22 +10,28 @@
         max-width: 900px;
         padding: 50px 15px 50px 50px;
     }
-    &:after {
-        content: "";
-        width: 280px;
-        height: 460px;
-        background: url('../../../assets/images/authFoxy.svg') no-repeat;
-        background-size: contain;
-        position: absolute;
-        right: -100px;
-        top: 50%;
-        pointer-events: none;
-        transform: translateY(-50%);
-        // z-index: -1;
+    @media (max-width: 991px) {
+        max-width: 600px;
+        height: min-content;
+        max-width: 90%;
+        // padding: 30px 15px;
     }
+    // &:after {
+    //     content: "";
+    //     width: 280px;
+    //     height: 460px;
+    //     background: url('../../../assets/images/authFoxy.svg') no-repeat;
+    //     background-size: contain;
+    //     position: absolute;
+    //     right: -100px;
+    //     top: 50%;
+    //     pointer-events: none;
+    //     transform: translateY(-50%);
+    //     // z-index: -1;
+    // }
     .rodal-close:before,
     .rodal-close:after {
-        background: linear-gradient(90deg, #fc5565 0%, #f6771e 100%);
+        background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
         width: 23px;
         height: 3px;
     }
@@ -48,6 +54,15 @@
             /* черный */
             color: #5b4670;
             margin-bottom: 20px;
+            @media (max-width: 991px) {
+                font-size: 22px;
+                line-height: 22px;
+            }
+            @media (max-width: 767px) {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 20px;
+            }
         }
         p {
             font-weight: 400;
@@ -58,12 +73,30 @@
             /* черный */
             color: #5b4670;
             margin-bottom: 60px;
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 30px;
+            }
+            @media (max-width:767px) {
+                font-size: 13px;
+                line-height: 18px;
+            }
         }
         .auth-modal__sub {
             font-size: 16px;
             line-height: 22px;
             width: 70%;
             margin: 0 auto;
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 17px;
+                width: 100%;
+            }
+            @media (max-width:767px) {
+                font-size: 13px;
+                line-height: 18px;
+            }
         }
         .auth-modal__links {
             display: flex;
@@ -74,7 +107,11 @@
             margin: 0 auto;
             background: url("../../../assets/images/cloud.svg") no-repeat;
             background-size: contain;
-            margin-bottom: 50px
+            margin-bottom: 50px;
+            @media (max-width: 991px) {
+                width: 250px;
+                height: 140px;
+            }
         }
     }
 }

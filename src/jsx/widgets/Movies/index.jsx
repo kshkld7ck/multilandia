@@ -23,6 +23,28 @@ function Movies({ config }) {
                     slidesToScroll: 1,
                 }
             },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+
 
         ]
     };
@@ -41,12 +63,12 @@ function Movies({ config }) {
                 <h3>{config.title} </h3>
                 <Slider {...settings}>
                     {config.items.map((el) => {
-                        return <div className="movies__item">
+                        return <Link to={el.url || '/'} className={`movies__item ${el.url ? "" : "disabled"}`}>
                             <img src={`https://mland.olit.su${el.image}`} className="movies__image" />
                             {el.title && <div className="movies__title">{el.title}</div>}
                             {el.text && <div className="movies__text">{el.text}</div>}
                             {el.sub && <div className="movies__sub">{el.sub}</div>}
-                        </div>
+                        </Link>
                     })}
                 </Slider>
                 {config.all_movies ? <div className="movies__footer">

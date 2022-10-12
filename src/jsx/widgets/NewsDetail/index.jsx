@@ -40,7 +40,7 @@ function NewsDetail({ config }) {
         <div className="container">
             <h3>{config.title}</h3>
             {config.pub_date && <div className="news-detail__date">
-                23 апреля 2021, 7:04
+                {config.pub_date}
             </div>}
             {config.images?.length > 0 && <div className="news-detail__slider">
                 <Slider {...settings}>

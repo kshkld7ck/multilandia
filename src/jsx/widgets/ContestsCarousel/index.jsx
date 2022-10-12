@@ -7,7 +7,7 @@ import renderItem from './item';
 
 
 function ContestsCarousel({ config }) {
-    
+
     const settings = {
         speed: 500,
         arrow: true,
@@ -16,6 +16,17 @@ function ContestsCarousel({ config }) {
         // slidesToShow: 3,
         variableWidth: true,
         // centerPadding: "30px",
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    variableWidth: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+
+        ]
     };
 
 

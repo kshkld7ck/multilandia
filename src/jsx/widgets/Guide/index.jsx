@@ -37,6 +37,13 @@ function Guide({ config }) {
                     slidesToScroll: 1,
                 }
             },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
 
         ]
     }
@@ -45,7 +52,7 @@ function Guide({ config }) {
             <div className="guide__content">
                 <div className="guide__header">
                     <h3>{config.title}</h3>
-                    {config.all_guides && <Link className="btn btn_primary btn_outline" to={config.all_guides.url}>{config.all_guides.label}</Link>}
+                    {config.all_guides && <Link className="btn btn_primary btn_outline guide__all-button" to={config.all_guides.url}>{config.all_guides.label}</Link>}
                 </div>
                 <Slider ref={(slider) => setSliderRef(slider)} {...settings}>
                     {config.items.map((el) => {

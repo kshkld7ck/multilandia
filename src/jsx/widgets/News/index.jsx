@@ -25,6 +25,20 @@ function News({ config }) {
                     slidesToScroll: 1,
                 }
             },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: config.id == 'heroes' ? 3 : 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
 
         ]
         // centerPadding: "30px",

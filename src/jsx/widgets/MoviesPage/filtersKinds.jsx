@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 function CheckboxComponent(props) {
     return <div className="filters__item-wrapper">
         {props.items.map((el, i) => {
+            console.log(el)
             return <Form.Check
                 inline
                 label={el}

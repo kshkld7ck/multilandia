@@ -103,7 +103,7 @@ function ContestItem({ config }) {
             </div>
             <div className="success-event-modal__wrapper">
                 {successVisible && <Rodal visible={true} onClose={() => handleSuccessClose()}>
-                    <img src={Foxy} className="success-event-modal__image" alt="" />
+                    {/* <img src={Foxy} className="success-event-modal__image" alt="" /> */}
                     <div className="event-modal">
                         <h3>Ваша заявка успешно отправлена</h3>
                     </div>

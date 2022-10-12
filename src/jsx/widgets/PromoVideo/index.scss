@@ -4,6 +4,9 @@
     .promo-video__content {
         position: relative;
     }
+    @media (max-width:767px) {
+        margin-bottom: 45px;
+    }
     img {
         box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
         height: 700px;
@@ -11,6 +14,12 @@
         object-fit: cover;
         background: #f2f2f2;
         border-radius: 40px;
+        @media (max-width: 991px) {
+            height: 350px
+        }
+        @media (max-width:767px) {
+            height: 550px;
+        }
     }
     .promo-video__item-info {
         background: linear-gradient(90deg, #733fff 0%, #f67780 100%);
@@ -19,6 +28,17 @@
         bottom: 130px;
         left: 80px;
         padding: 40px;
+        @media (max-width: 991px) {
+            border-radius: 45px 0px;
+            padding: 25px;
+            left: 40px;
+        }
+        @media (max-width: 767px) {
+            border-radius: 40px 0px;
+            padding: 20px;
+            left: 15px;
+            bottom: 70px;
+        }
         .promo-video__item-title {
             font-weight: 800;
             color: #fff;
@@ -26,6 +46,14 @@
             line-height: 60px;
             margin-bottom: 0;
             font-family: Baloo;
+            @media (max-width: 991px) {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            @media (max-width: 767px) {
+                font-size: 24px;
+                line-height: 24px;
+            }
         }
         .promo-video__item-text {
             font-weight: 400;
@@ -35,11 +63,27 @@
             color: #fff;
             margin-top: 5px;
             margin-bottom: 5px;
+            @media (max-width: 991px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @media (max-width: 767px) {
+                font-size: 13px;
+                line-height: 16px;
+            }
         }
         .btn {
             position: absolute;
             bottom: -35px;
             height: 70px;
+            @media (max-width: 991px) {
+                height: 50px;
+            }
+            @media (max-width: 767px) {
+                height: 46px;
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
     }
 }

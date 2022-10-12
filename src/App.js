@@ -37,7 +37,10 @@ function App() {
         setData(response.data)
       }
     })
-    // Axios.get(`/api/user/edit`).then(function (response) {
+    const searchParams = {
+      aaа: 123
+    }
+    // Axios.get(`/api/user/edit`, {params: searchParams}).then(function (response) {
     //   if (response.data) {
         
     //   }

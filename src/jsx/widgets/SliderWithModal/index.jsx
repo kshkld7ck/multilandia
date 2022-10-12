@@ -14,7 +14,7 @@ function SliderWithModal({ config }) {
     }
     const handleClose = () => { setVisible(false) }
     const settings = {
-        infinite: true,
+        infinite: false,
         speed: 500,
         arrow: true,
 
@@ -24,14 +24,28 @@ function SliderWithModal({ config }) {
             {
                 breakpoint: 1800,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: config.items?.length > 4 ? 5 : config.items?.length,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: config.items?.length > 3 ? 4 : config.items?.length,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: config.items?.length > 2 ? 3 : config.items?.length,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: config.items?.length > 1 ? 2 : config.items?.length,
                     slidesToScroll: 1,
                 }
             },

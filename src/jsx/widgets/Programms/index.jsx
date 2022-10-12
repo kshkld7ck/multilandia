@@ -81,6 +81,24 @@ function Programms({ config }) {
                     slidesToScroll: 1,
                 }
             },
+            {
+                breakpoint: 991,
+                settings: {
+                    // variableWidth: true,
+
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    // variableWidth: true,
+
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
 
         ]
     };
@@ -148,10 +166,13 @@ function Programms({ config }) {
                                             <img src={`https://mland.olit.su/${el.image}`} className="programms__item-image" alt="" />
                                             <div className="programms__item-info">
                                                 <div className="programms__item-name">{el.title}</div>
-                                                <div className="programms__item-tags">
+                                                <div className="programms__item-tags hidden_xs">
                                                     {el.series.map((item) => <span>{item.replace(el.title + '.', "")}</span>)}
                                                 </div>
                                             </div>
+                                            <div className="programms__item-tags hidden_md hidden_lg">
+                                                    {el.series.map((item) => <span>{item.replace(el.title + '.', "")}</span>)}
+                                                </div>
                                         </div>
                                     })}
                                 </Accordion.Body>
