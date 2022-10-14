@@ -311,3 +311,10 @@
         pointer-events: none;
     }
 }
+
+.movies-block .slick-slide>div {
+    @media (max-width: 991px) {
+        height: auto;
+        display: flex;
+    }
+}
