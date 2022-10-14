@@ -32,7 +32,7 @@
             grid-template-columns: 215px 1fr 1fr auto;
         }
         @media (max-width: 1200px) {
-            grid-template-areas: "mainnav mainnav cloud" "nav1 nav1 cloud" "nav2 nav2 cloud" "footerfooter footerfooter footerfooter" "copyright copyright copyright";
+            grid-template-areas: "mainnav mainnav mainnav" "nav1 nav1 nav1" "nav2 nav2 nav2" "footerfooter footerfooter footerfooter" "copyright copyright copyright";
             row-gap: 50px;
         }
         @media (max-width: 767px) {

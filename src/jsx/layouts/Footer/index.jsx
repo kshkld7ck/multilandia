@@ -20,9 +20,9 @@ function Footer(props) {
                                 return <Link to={el.url}>{el.label}</Link>
                             })}
                         </div>
-                        <div className="footer__row-end footer__cloud">
+                        {/* <div className="footer__row-end footer__cloud">
                             <img src={Picture1} alt="" />
-                        </div>
+                        </div> */}
 
 
 
