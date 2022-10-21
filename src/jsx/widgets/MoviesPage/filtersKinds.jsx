@@ -2,17 +2,19 @@ import React from 'react';
 import './filters.scss'
 import Form from 'react-bootstrap/Form';
 
-function CheckboxComponent(props) {
+function CheckboxComponent(value, handler, activeFilters) {
     return <div className="filters__item-wrapper">
-        {props.items.map((el, i) => {
-            console.log(el)
+        {value.items.map((el, i) => {
+
             return <Form.Check
                 inline
-                label={el}
-                name={props.name}
+                label={el.val}
+                name={value.name}
                 type="checkbox"
-                value={el}
-                id={`filter-${props.name}-${i}`}
+                value={el.id}
+                checked={activeFilters[value.name]?.includes("" + el.id)}
+                onChange={(e) => handler(e)}
+                id={`filter-${el.id}-${i}`}
             />
         })}
 
@@ -45,12 +47,12 @@ function InputComponent(props) {
 }
 
 function FiltersKinds(props) {
-    console.log(props)
+
     if (props.value.type == 'checkbox') {
-        return CheckboxComponent(props.value)
+        return CheckboxComponent(props.value, (event) => props.handleChange(event), props.activeFilters)
     } else if (props.value.type == 'radio') {
         return RadioComponent(props.value)
-    } 
+    }
 
     return null
 }

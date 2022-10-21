@@ -48,6 +48,7 @@
     grid-template-columns: 1fr 400px;
     column-gap: 40px;
     justify-content: space-between;
+    align-items: flex-start;
     @media (max-width: 1799px) {
         grid-template-columns: 1fr 260px;
     }
@@ -94,6 +95,7 @@
             box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
             padding: 10px;
             position: relative;
+            align-self: flex-start;
             .movies-page__item-age {
                 position: absolute;
                 top: 20px;
