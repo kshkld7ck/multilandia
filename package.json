@@ -10,6 +10,7 @@
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
+        "autoprefixer": "^10.4.12",
         "axios": "^0.21.4",
         "bootstrap": "^5.2.0",
         "classnames": "^2.3.1",
@@ -43,6 +44,7 @@
         "react-paginate": "^7.1.5",
         "react-pagination": "^1.0.0",
         "react-player": "^2.9.0",
+        "react-router-dom": "^6.4.2",
         "react-scripts": "4.0.3",
         "react-scroll-to-top": "^3.0.0",
         "react-slick": "^0.28.1",
@@ -70,9 +72,9 @@
     },
     "browserslist": {
         "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
+            "Android >= 5.0",
+            "Chrome >= 60",
+            "iOS >= 9"
         ],
         "development": [
             "last 1 chrome version",

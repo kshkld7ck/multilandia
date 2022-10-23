@@ -28,20 +28,20 @@
             }
         }
         .banners__item-info {
-            background: linear-gradient(90deg, #733fff 0%, #f67780 100%);
-            border-radius: 75px 0px;
+            background: #5772f7;
+            border-radius: 30px;
             position: absolute;
             top: 100px;
             left: 80px;
             padding: 40px;
             @media (max-width: 991px) {
                 padding: 25px;
-                border-radius: 45px 0px;
+                border-radius: 30px;
                 top: 45px;
                 left: 40px;
             }
             @media (max-width: 767px) {
-                border-radius: 40px 0px;
+                border-radius: 30px;
                 padding: 20px;
                 left: 15px;
                 top: unset;
@@ -184,6 +184,10 @@
         &:before,
         &:after {
             display: none;
+        }
+        img {
+            width: 24px;
+            filter: invert(1);
         }
         @media (max-width: 991px) {
             height: 44px;

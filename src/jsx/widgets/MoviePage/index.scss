@@ -188,8 +188,10 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: url("../../../assets/images/arrow.svg");
+            background: url("../../../assets/images/arrow2.svg");
             background-size: contain;
+            filter: invert(1);
+            background-repeat: no-repeat;
         }
         &:before {
             transition: 0.2s;

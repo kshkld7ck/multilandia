@@ -20,16 +20,18 @@ function CheckboxComponent(value, handler, activeFilters) {
 
     </div>
 }
-function RadioComponent(props) {
+function RadioComponent(value, handler, activeFilters) {
     return <div className="filters__item-wrapper">
-        {props.items.map((el, i) => {
+        {value.items.map((el, i) => {
             return <Form.Check
                 inline
                 label={el.title}
-                name={props.name}
+                name={value.name}
                 type="radio"
                 value={el.value}
-                id={`filter-${props.name}-${i}`}
+                checked={activeFilters[value.name] == el.value}
+                onChange={(e) => handler(e)}
+                id={`filter-${value.name}-${i}`}
             />
         })}
 
@@ -51,7 +53,7 @@ function FiltersKinds(props) {
     if (props.value.type == 'checkbox') {
         return CheckboxComponent(props.value, (event) => props.handleChange(event), props.activeFilters)
     } else if (props.value.type == 'radio') {
-        return RadioComponent(props.value)
+        return RadioComponent(props.value, (event) => props.handleChange(event), props.activeFilters)
     }
 
     return null

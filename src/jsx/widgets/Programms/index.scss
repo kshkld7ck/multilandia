@@ -35,7 +35,7 @@
                 &:checked {
                     // background: red;
                     &+.programms__dates-item {
-                        background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+                        background: #5772f7;
                         .programms__date-heading {
                             color: #fff;
                             transition: 0;
@@ -107,7 +107,7 @@
         box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
         &:not(.active):hover {
             .programms__date-heading {
-                background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+                background: #5772f7;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -115,7 +115,7 @@
                 transition: 0.3s;
             }
             .programms__date-subheading {
-                background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+                background: #5772f7;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
@@ -124,7 +124,7 @@
             }
         }
         &.active {
-            background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+            background: #5772f7;
             .programms__date-heading {
                 color: #fff;
             }
@@ -429,7 +429,7 @@
             }
         }
         &.active {
-            background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+            background: #5772f7;
             .programms__item-time {
                 color: #fff;
             }

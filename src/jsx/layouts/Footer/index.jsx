@@ -3,8 +3,12 @@ import './index.scss'
 import { Link } from "wouter";
 import Picture1 from '../../../assets/images/footer_cloud.png'
 import Logo from '../../../assets/images/logo_small.svg'
-import YT from '../../../assets/images/yt.svg';
-import VK from '../../../assets/images/vk.svg';
+import YT from '../../../assets/images/YT.png';
+import VK from '../../../assets/images/VK.png';
+import DZ from '../../../assets/images/DZ.png';
+import RT from '../../../assets/images/RT.png';
+import TG from '../../../assets/images/TG.png';
+import OK from '../../../assets/images/OK.png';
 function Footer(props) {
     const { data } = props;
     const { footer } = data.data
@@ -49,8 +53,12 @@ function Footer(props) {
 
                         <div className="footer__end">
                             <div className="footer__socials">
-                                {footer.social_icons.vk && <a href={footer.social_icons.vk}><img src={VK} alt="" /></a>}
-                                {footer.social_icons.youtube && <a href={footer.social_icons.youtube}><img src={YT} alt="" /></a>}
+                                {footer.social_icons.vk && <a href={footer.social_icons?.vk}><img src={VK} alt="" /></a>}
+                                {footer.social_icons.youtube && <a href={footer.social_icons?.youtube}><img src={YT} alt="" /></a>}
+                                {footer.social_icons.tg && <a href={footer.social_icons?.tg}><img src={TG} alt="" /></a>}
+                                {footer.social_icons.rutube && <a href={footer.social_icons?.rutube}><img src={RT} alt="" /></a>}
+                                {footer.social_icons.dzen && <a href={footer.social_icons?.dzen}><img src={DZ} alt="" /></a>}
+                                {footer.social_icons.ok && <a href={footer.social_icons?.ok}><img src={OK} alt="" /></a>}
                             </div>
                             {footer.email && <div className="footer__mail">
                                 <p>e-mail</p>

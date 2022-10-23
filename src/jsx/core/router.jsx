@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "wouter";
 import Layout from "../layouts";
 import Widgets from '../widgets'
 

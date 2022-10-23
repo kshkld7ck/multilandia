@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import Slider from "react-slick";
 import { Link } from 'wouter';
-import Arrow from '../../../assets/images/arrow.svg'
+import Arrow from '../../../assets/images/arrow2.svg'
 function Banners({ config }) {
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;

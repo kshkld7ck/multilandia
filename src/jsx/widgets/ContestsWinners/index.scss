@@ -55,7 +55,7 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 23px;
-            color: #9900cc;
+            color: #5772f7;
             margin-top: 5px;
             @media (max-width: 991px) {
                 font-size: 14px;
@@ -91,7 +91,7 @@
                 line-height: 28px;
                 letter-spacing: 0.01em;
                 text-transform: uppercase;
-                color: #4d9ab5;
+                color: #5772f7;
                 @media (max-width: 991px) {
                     font-size: 14px;
                     line-height: 22px;
@@ -139,7 +139,9 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: url("../../../assets/images/arrow.svg");
+            background: url("../../../assets/images/arrow2.svg");
+            background-repeat: no-repeat;
+            filter: invert(1);
             background-size: contain;
         }
         &:before {
@@ -213,7 +215,7 @@
             line-height: 28px;
             letter-spacing: 0.01em;
             text-transform: uppercase;
-            color: #4d9ab5;
+            color: #5772f7;
         }
         .arrow-left,
         .arrow-right {
@@ -297,7 +299,7 @@
             font-size: 20px;
             line-height: 29px;
             text-align: center;
-            color: #9900cc;
+            color: #5772f7;
             @media (max-width: 767px) {
                 font-size: 11px;
                 line-height: 14px;

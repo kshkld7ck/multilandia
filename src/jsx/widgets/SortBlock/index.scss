@@ -39,7 +39,7 @@
             color: #f47456;
         }
         &.active {
-            background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+            background: #5772f7;
             color: #fff;
             &:hover {
                 color: #fff;
@@ -80,7 +80,7 @@
             transform: none;
         }
     }
-    transition: .2s;
+    transition: 0.2s;
     .form-control {
         padding: 20px 30px;
         border-radius: 20px;
@@ -91,7 +91,7 @@
         line-height: 26px;
         text-transform: uppercase;
         color: #5b4670;
-        transition: .2s;
+        transition: 0.2s;
         @media (max-width: 1799px) {
             font-size: 16px;
             line-height: 23px;
@@ -118,7 +118,7 @@
         margin-right: 20px;
     }
     &.active {
-        transition: .2s;
+        transition: 0.2s;
         min-width: 300px;
         justify-content: space-between;
         @media (max-width: 991px) {

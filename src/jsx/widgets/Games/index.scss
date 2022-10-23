@@ -52,7 +52,9 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            background: url("../../../assets/images/arrow.svg");
+            background: url("../../../assets/images/arrow2.svg");
+            background-repeat: no-repeat;
+            filter: invert(1);
             background-size: contain;
         }
         &:before {

@@ -12,6 +12,7 @@
     .header__logo {
         cursor: pointer;
         width: 250px;
+        margin-top: -18px;
         @media (max-width: 1800px) {
             width: 220px;
         }
@@ -200,6 +201,7 @@
         display: grid;
         margin: 0 auto;
         padding: 30px;
+        grid-template-rows: -webkit-min-content auto;
         grid-template-rows: min-content auto;
         row-gap: 70px;
         overflow-y: auto;
