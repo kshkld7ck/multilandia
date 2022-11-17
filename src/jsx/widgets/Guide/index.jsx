@@ -24,7 +24,7 @@ function Guide({ config }) {
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         // variableWidth: true,
         // afterChange: () =>
         // this.setState(state => ({ updateCount: state.updateCount + 1 })),
@@ -34,7 +34,7 @@ function Guide({ config }) {
                 breakpoint: 1800,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 3,
                 }
             },
             {

@@ -117,7 +117,7 @@ h3 {
 
 body {
     // background: url('../../assets/images/bg.svg');
-    background: rgb(237, 218, 250);
+    background: #f6f7ed;
 }
 
 * {
@@ -158,4 +158,8 @@ body {
     @media (min-width: 992px) {
         display: none;
     }
+}
+
+.no-content {
+    font-size: 18px
 }

@@ -1,13 +1,13 @@
 .movies-block {
     &_theme_movies {
         &.movies-block_theme_contests {
-            background: url("../../../assets/images/contestsbg.png") no-repeat;
+            background: url("../../../assets/images/contrastBg.png") no-repeat;
             // &:after {
             //     background: url("../../../assets/images/foxies2.png");
             //     background-size: contain;
             // }
         }
-        background: url("../../../assets/images/moviesbg.png") no-repeat;
+        background: url("../../../assets/images/contrastBg.png") no-repeat;
         background-size: cover;
         background-position: center;
         padding: 80px 0px 45px 0px;
@@ -55,6 +55,8 @@
             img {
                 border-radius: 20px;
                 width: 100%;
+                max-height: 165px;
+                object-fit: cover;
             }
             .movies__title {
                 font-weight: 700;

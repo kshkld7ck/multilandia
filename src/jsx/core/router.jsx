@@ -10,7 +10,7 @@ function Router(data) {
                 {data?.data?.widgets?.map((el) => {
                     const Component = Widgets[el.kind];
                     if (Component) {
-                        return <Component config={el} />
+                        return <Component config={el} data={data} />
                     }
                     return null
                 })}

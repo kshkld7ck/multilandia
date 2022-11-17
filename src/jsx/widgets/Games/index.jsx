@@ -8,7 +8,7 @@ function Games({ config }) {
         speed: 500,
         arrow: true,
 
-        slidesToScroll: 1,
+        slidesToScroll: 6,
         slidesToShow: 6,
         // centerPadding: "30px",
         responsive: [
@@ -16,7 +16,7 @@ function Games({ config }) {
               breakpoint: 1800,
               settings: {
                 slidesToShow: 4,
-                slidesToScroll: 1,
+                slidesToScroll: 4,
               }
             },
            

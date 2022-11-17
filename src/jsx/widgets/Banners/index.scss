@@ -218,3 +218,15 @@
         transform: rotate3d(0, 0, 1, 360deg);
     }
 }
+
+.banners__content {
+    @media (min-width: 2000px) {
+        max-width: 1720px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .slick-arrow {
+        display: none !important;
+    }
+}

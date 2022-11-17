@@ -18,35 +18,35 @@ function SliderWithModal({ config }) {
         speed: 500,
         arrow: true,
 
-        slidesToScroll: 1,
+        slidesToScroll: 6,
         slidesToShow: 6,
         responsive: [
             {
                 breakpoint: 1800,
                 settings: {
                     slidesToShow: config.items?.length > 4 ? 5 : config.items?.length,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.items?.length > 4 ? 5 : config.items?.length,
                 }
             },
             {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: config.items?.length > 3 ? 4 : config.items?.length,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.items?.length > 3 ? 4 : config.items?.length,
                 }
             },
             {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: config.items?.length > 2 ? 3 : config.items?.length,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.items?.length > 2 ? 3 : config.items?.length,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: config.items?.length > 1 ? 2 : config.items?.length,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.items?.length > 1 ? 2 : config.items?.length,
                 }
             },
 

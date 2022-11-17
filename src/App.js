@@ -8,12 +8,13 @@ import { Toaster } from 'react-hot-toast';
 import ScrollToTop from "react-scroll-to-top";
 
 function App() {
-  const [location] = useLocation();
+  const [location, setLocation] = useLocation();
   const [data, setData] = useState([])
   const [city, setCity] = useLocalStorage('city', null);
 
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const params = {
       url: location
     }
@@ -36,10 +37,12 @@ function App() {
       if (response.data) {
         setData(response.data)
       }
+    }).catch((error) => {
+      setLocation('/404')
     })
-    const searchParams = {
-      aaа: 123
-    }
+    // const searchParams = {
+    //   aaа: 123
+    // }
     // Axios.get(`/api/user/edit`, {params: searchParams}).then(function (response) {
     //   if (response.data) {
         

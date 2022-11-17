@@ -68,7 +68,7 @@ function ContestsWinners({ config }) {
         <section className="contests-winners">
             <div className="container">
                 <h3>{config.title}</h3>
-                <Slider {...settings}>
+                {config.items?.length > 0 ? <Slider {...settings}>
                     {config.items.map((el, i) => {
                         return <div onClick={() => {
                             handleOpen(el, i)
@@ -81,7 +81,7 @@ function ContestsWinners({ config }) {
                             {el.voites && <div className="contests-winners__votes">Голосов: {el.voites}</div>}
                         </div>
                     })}
-                </Slider>
+                </Slider> : <div className="no-content">Пока не загружено ни одной работы</div>}
                 <div className="contests-winners__footer">
                     <div className={`btn btn_outline btn_hidden`}><span>"скрыто"</span></div>
                 </div>

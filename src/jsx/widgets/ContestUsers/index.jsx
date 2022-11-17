@@ -67,7 +67,7 @@ function ContestsUsers({ config }) {
     return <section className="contests-winners contests-winners_without_bg contests-winners_users" style={{ marginTop: '100px', marginBottom: '100px' }}>
         <div className="container">
             <h3>{config.title}</h3>
-            <div className="fav-contests__list">
+            {config.items?.length > 0 ?<div className="fav-contests__list">
                 {items.map((el, i) => {
                     return <div className="contests-winners__item">
                         <div className="contest-winners__item-inner" onClick={() => {
@@ -83,7 +83,7 @@ function ContestsUsers({ config }) {
                         {!!el.button && renderButton(el.vote, el.id)}
                     </div>
                 })}
-            </div>
+            </div> : <div className="no-content">Пока не загружено ни одной работы</div>}
         </div>
         <Rodal visible={visible} onClose={() => handleClose()}>
             <div className="contests-modal">

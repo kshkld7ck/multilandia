@@ -36,7 +36,7 @@ const getReturnValues = (countDown) => {
 };
 
 export { useCountdown };
-function ContestItem({ config }) {
+function ContestItem({ config, data }) {
     const [days, hours, minutes, seconds] = useCountdown(config.date_end);
     const [visible, setVisible] = useState(false);
     const [successVisible, setSuccessVisible] = useState(false);
@@ -53,6 +53,7 @@ function ContestItem({ config }) {
 
     let now = +new Date();
     let configDate = +new Date(config.date_end)
+    // console.log('data', data.data.header.isLogged)
     return <seciton className="contest-item">
         <div className="container">
             <h3>{config.title}</h3>
@@ -92,7 +93,7 @@ function ContestItem({ config }) {
                                     })} />
                                 <span>сек</span>
                             </div>
-                            <button className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Принять участие</button>
+                            {data.data.header.isLogged && <button className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Принять участие</button>}
                         </div></>}
                     </div>
                 </div>

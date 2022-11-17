@@ -33,8 +33,24 @@ function Banners({ config }) {
         centerMode: true,
         slidesToScroll: 1,
         slidesToShow: 1,
-        centerPadding: "30px",
+        // centerPadding: "30px",
         responsive: [
+            {
+                breakpoint: 4000,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+                }
+            },
+            {
+                breakpoint: 2000,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "10px",
+                }
+            },
             {
                 breakpoint: 767,
                 settings: {

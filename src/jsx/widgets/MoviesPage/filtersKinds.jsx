@@ -50,9 +50,9 @@ function InputComponent(props) {
 
 function FiltersKinds(props) {
 
-    if (props.value.type == 'checkbox') {
+    if (props.value?.type == 'checkbox') {
         return CheckboxComponent(props.value, (event) => props.handleChange(event), props.activeFilters)
-    } else if (props.value.type == 'radio') {
+    } else if (props?.value.type == 'radio') {
         return RadioComponent(props.value, (event) => props.handleChange(event), props.activeFilters)
     }
 

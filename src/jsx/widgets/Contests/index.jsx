@@ -11,7 +11,7 @@ function Contests({ config }) {
         speed: 500,
         arrow: true,
 
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         slidesToShow: 4,
         // centerPadding: "30px",
         responsive: [
@@ -19,7 +19,7 @@ function Contests({ config }) {
                 breakpoint: 1800,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 3,
                 }
             },
 

@@ -65,7 +65,12 @@
         column-gap: 40px;
         row-gap: 40px;
         @media (max-width: 1799px) {
-            grid-template-columns: repeat(auto-fill, 240px);
+            grid-template-columns: repeat(auto-fill, 260px);
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(auto-fill, calc(50% - 20px));
             column-gap: 30px;
             row-gap: 30px;
         }

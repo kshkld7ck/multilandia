@@ -58,7 +58,7 @@ function Programms({ config }) {
         speed: 500,
         arrow: true,
 
-        slidesToScroll: 1,
+        slidesToScroll: 7,
         slidesToShow: 7,
         initialSlide: startDayIndex,
         // centerPadding: "30px",
@@ -69,7 +69,7 @@ function Programms({ config }) {
                     // variableWidth: true,
 
                     slidesToShow: 6,
-                    slidesToScroll: 1,
+                    slidesToScroll: 6,
                 }
             },
             {
@@ -78,7 +78,7 @@ function Programms({ config }) {
                     // variableWidth: true,
 
                     slidesToShow: 4,
-                    slidesToScroll: 1,
+                    slidesToScroll: 4,
                 }
             },
             {
@@ -87,7 +87,7 @@ function Programms({ config }) {
                     // variableWidth: true,
 
                     slidesToShow: 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: 3,
                 }
             },
             {
@@ -109,6 +109,7 @@ function Programms({ config }) {
         "Вечер": Icon1,
         "Ночь": Icon4
     }
+    // console.log('itemns', items.filter((el) => el.childrens?.length > 0))
     return <section className="programms">
         <div className="container">
             <h3>{config.title}</h3>
@@ -147,7 +148,7 @@ function Programms({ config }) {
                         })}
                     </Slider>
                 </div>
-                <div className="programms__list">
+                {items.filter((el) => el.childrens?.length > 0)?.length > 0 ? <div className="programms__list">
                     {isFetching ? <Preloader /> : <Accordion alwaysOpen defaultActiveKey={activeKey.toString()}>
                         {items.map((el, i) => {
                             return el.childrens?.length > 0 && <Accordion.Item eventKey={i.toString()} >
@@ -182,7 +183,7 @@ function Programms({ config }) {
 
                     </Accordion>
                     }
-                </div>
+                </div> : <div className="no-content">Не найдено расписания на эту дату</div>}
 
             </div>
         </div >

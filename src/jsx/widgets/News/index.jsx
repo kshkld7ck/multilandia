@@ -15,21 +15,21 @@ function News({ config }) {
                 breakpoint: 1800,
                 settings: {
                     slidesToShow: config.id == 'heroes' ? 5 : 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.id == 'heroes' ? 5 : 3,
                 }
             },
             {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: config.id == 'heroes' ? 4 : 3,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.id == 'heroes' ? 4 : 3,
                 }
             },
             {
                 breakpoint: 991,
                 settings: {
                     slidesToShow: config.id == 'heroes' ? 3 : 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: config.id == 'heroes' ? 3 : 2,
                 }
             },
             {

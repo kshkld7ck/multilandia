@@ -24,6 +24,8 @@ import FavoriteContests from './FavoriteContests'
 import ProfileFavorites from './ProfileFavorites'
 import ContestItem from './ContestItem'
 import ContestsUsers from './ContestUsers'
+import ErrorPage from './ErrorPage'
+import VideoWidget from './Video'
 // import Attractions from './Attractions'
 // import Birthday from './Birthday'
 // import MainBanner from './MainBanner'
@@ -65,6 +67,8 @@ const Widgets = {
     "prfile_favorite_movies": ProfileFavorites,
     "contest_detail": ContestItem,
     "contest_users": ContestsUsers,
+    "404": ErrorPage,
+    "video": VideoWidget
     // "main_banner": MainBanner,
     // "attractions": Attractions,
     // "price": Prices,

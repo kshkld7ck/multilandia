@@ -41,7 +41,7 @@ function MoviesPage({ config }) {
                 if (urlValue.includes(',')) {
                     newFilters[urlKey] = urlValue.split(',')
 
-                } else if (config.filters[urlKey].type == 'checkbox') {
+                } else if (config.filters[urlKey]?.type == 'checkbox') {
                     newFilters[urlKey] = [urlValue]
                 } else {
                     newFilters[urlKey] = urlValue
@@ -137,20 +137,20 @@ function MoviesPage({ config }) {
     return <section className="movies-page">
         <div className="container">
             <h3>{config.title}</h3>
-            <div className="movies-page__filters-button" onClick={()=> setActive(true)}>Фильтры <img src={FiltersIcon} alt=""/></div>
+            <div className="movies-page__filters-button" onClick={() => setActive(true)}>Фильтры <img src={FiltersIcon} alt="" /></div>
             <div className="movies-page__content">
-                <div className="movies-page__list">
-                    {items?.length > 0 ? items.map((el) => {
+                {items?.length > 0 ? <div className="movies-page__list">
+                    {items.map((el) => {
                         return <Link to={`/movies/${el.url}`} className="movies-page__item" key={el.id}>
                             <img src={`https://mland.olit.su/${el.img}`} className="movies-page__item-image" />
                             {el.age && <div className="movies-page__item-age">{el.age}</div>}
                             <div className="movies-page__item-title">{el.title}</div>
                             <Link className="movies-page__item-hashtag" to={el.hashtag.url}>{el.hashtag.title}</Link>
                         </Link>
-                    }) : <div></div>}
-                </div>
+                    })}
+                </div> : <div className="no-content">Не найдено ни одного мультфильма</div>}
                 <div className={`movies-page__filters ${active ? "active" : ""}`}>
-                    <h4><img src={Arrow} alt="" onClick={()=> setActive(false)}/> Фильтры</h4>
+                    <h4><img src={Arrow} alt="" onClick={() => setActive(false)} /> Фильтры</h4>
                     {Object.entries(filters).map((el, i) => {
                         if (el[1].name == 'search') {
                             return <Form.Group className="movies-page__search" controlId="formBasicEmail">
