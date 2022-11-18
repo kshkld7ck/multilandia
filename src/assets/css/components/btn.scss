@@ -20,22 +20,22 @@
         background: #5772f7;
         color: #fff;
         &:hover {
-            color: #fff;
+            color: #fff !important;
         }
         &.btn_outline {
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
         }
         &:hover {
-            background: #5772f7;
-            opacity: 0.9;
+            background: #5772f7 !important;
+            opacity: 0.9 !important;
         }
         &:focus,
         &:active {
-            background: #5772f7;
-            opacity: 0.9;
-            color: #fff;
+            background: #5772f7 !important;
+            opacity: 0.9 !important;
+            color: #fff !important;
             box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5) !important;
-            border: 1px solid transparent;
+            border: 1px solid transparent !important;
         }
     }
     &_white {

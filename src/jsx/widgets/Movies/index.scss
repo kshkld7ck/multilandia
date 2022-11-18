@@ -1,13 +1,13 @@
 .movies-block {
     &_theme_movies {
         &.movies-block_theme_contests {
-            background: url("../../../assets/images/contrastBg.png") no-repeat;
+            background: linear-gradient(90deg, #A07CFF 0%, #FF9AA1 100%);
             // &:after {
             //     background: url("../../../assets/images/foxies2.png");
             //     background-size: contain;
             // }
         }
-        background: url("../../../assets/images/contrastBg.png") no-repeat;
+        background: linear-gradient(90deg, #A07CFF 0%, #FF9AA1 100%);
         background-size: cover;
         background-position: center;
         padding: 80px 0px 45px 0px;
