@@ -18,7 +18,6 @@ function NewsList({ config }) {
 
     useEffect(() => {
         const params = {
-            // url: `${config.filter.url.replace("{ID}", activeId)}&page=${activePage}&full=0`
             url: `${config.filter.url.replace("{ID}", activeId)}&full=0`
         }
 
@@ -40,8 +39,8 @@ function NewsList({ config }) {
                 <div className="news-list__items">
                     {items?.length > 0 && items.map((el) => {
                         return <Link href={el.url || '/'} className="news__item">
-                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" loading="lazy" />
-                            {el.title && <div className="news__title">{el.title}</div>}
+                            <img src={`https://mland.olit.su${el.image}`} className="news__image" loading="lazy" />
+                            {/* {el.title && <div className="news__title">{el.title}</div>} */}
                             {el.text && <div className="news__text">{el.text}</div>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </Link>
