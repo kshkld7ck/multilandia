@@ -93,7 +93,7 @@ function ContestItem({ config, data }) {
                                     })} />
                                 <span>сек</span>
                             </div>
-                            {data.data.header.isLogged && <button className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Принять участие</button>}
+                            {data.data.header.isLogged ? <button className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Принять участие</button> : <button className="btn btn_primary btn_outline" onClick={(() => {document?.getElementById('auth_button').click()})}>Авторизоваться</button>}
                         </div></>}
                     </div>
                 </div>

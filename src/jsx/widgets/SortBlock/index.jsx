@@ -47,7 +47,7 @@ function SortBlock(props) {
 
                     })} key={el.id} onClick={() => {
                         setActive(el.id)
-                        callback(el.id)
+                        callback(el.id, el.url)
                     }}>
                     {el.title}
                 </div>)}

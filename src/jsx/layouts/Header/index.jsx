@@ -79,8 +79,8 @@ function Header(props) {
                             <img src={SearchIcon} alt="" onClick={() => setActive(!active)} />
                             <input type="search" placeholder="Поиск" />
                         </div>
-                        {header.isLogged ? <Link to={'/profile'} className="btn btn_primary btn_outline" >Профиль</Link>
-                            : <button className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Вход</button>}
+                        {header.isLogged ? <Link to={'/profile'} className="btn btn_primary btn_outline"  >Профиль</Link>
+                            : <button id="auth_button" className="btn btn_primary btn_outline" onClick={() => handleOpen()}>Вход</button>}
                         <div className={`header__toggler ${showMenu ? 'active' : ''}`} onClick={(() => setShowMenu(!showMenu))}>
                             <span></span><span></span><span></span>
                         </div>
