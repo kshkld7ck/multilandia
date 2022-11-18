@@ -60,7 +60,7 @@ function SliderWithModal({ config }) {
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="news__item" onClick={() => handleOpen(el)}>
-                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" loading="lazy" />
                             {el.title && <div className="news__title">{el.title}</div>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </div>
@@ -79,7 +79,7 @@ function SliderWithModal({ config }) {
         </div>
         <Rodal visible={visible} onClose={() => handleClose()}>
             <div className="slider-extra__modal">
-                <img src={`https://mland.olit.su/${activeItem.image}`} className="slider-extra__image" />
+                <img src={`https://mland.olit.su/${activeItem.image}`} className="slider-extra__image" loading="lazy" />
                 <div className="slider-extra__content">
                     {activeItem.title && <h6 className="">{activeItem.title}</h6>}
                     {activeItem.text && <div dangerouslySetInnerHTML={{ __html: activeItem.text }}></div>}

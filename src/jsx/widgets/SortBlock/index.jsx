@@ -52,10 +52,10 @@ function SortBlock(props) {
                     {el.title}
                 </div>)}
             </div>
-            <Form.Group ref={wrapperRef} className={`sort-block__search ${visible ? "active" : ""}`} controlId="formBasicEmail">
+            {/* <Form.Group ref={wrapperRef} className={`sort-block__search ${visible ? "active" : ""}`} controlId="formBasicEmail">
                 <Form.Control type="email" placeholder="ПОИСК" />
                 <img src={SearchIcon} alt="" className="sort-block__search-icon" onClick={() => setVisible(!visible)} />
-            </Form.Group>
+            </Form.Group> */}
         </div>
     </section>
 }

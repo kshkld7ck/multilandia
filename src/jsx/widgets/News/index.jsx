@@ -51,7 +51,7 @@ function News({ config }) {
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <div className="news__item">
-                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" loading="lazy" />
                             {el.title && <Link href={el.url || '/'} className="news__title">{el.title}</Link>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </div>

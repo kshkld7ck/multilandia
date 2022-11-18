@@ -36,12 +36,13 @@ function NewsList({ config }) {
         <div className="container">
             <div className="news-list__content">
                 <h3>{config.title}</h3>
-                {config?.filter?.items && <SortBlock items={config.filter.items} callback={handleCallback} />}
+                {config?.filter?.items?.length > 0 && <SortBlock items={config.filter.items} callback={handleCallback} />}
                 <div className="news-list__items">
                     {items?.length > 0 && items.map((el) => {
                         return <Link href={el.url || '/'} className="news__item">
-                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" />
+                            <img src={`https://mland.olit.su/${el.image}`} className="news__image" loading="lazy" />
                             {el.title && <div className="news__title">{el.title}</div>}
+                            {el.text && <div className="news__text">{el.text}</div>}
                             {el.sub && <div className="news__sub">{el.sub}</div>}
                         </Link>
                     })}

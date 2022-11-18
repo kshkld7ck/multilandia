@@ -24,7 +24,7 @@ function FavoriteContests({ config }) {
                         handleOpen(el, i)
                     }} className="contests-winners__item">
                         <div className="contests-winners__image">
-                            <img src={`https://mland.olit.su/${el.img}`} className="" />
+                            <img src={`https://mland.olit.su/${el.img}`} className="" loading="lazy" />
                             {el.is_winner == 1 && <div className="contests-winners__badge">ПОБЕДИТЕЛЬ</div>}
                         </div>
                         {el.title && <div className="contests-winners__name">{el.title}</div>}
@@ -36,7 +36,7 @@ function FavoriteContests({ config }) {
         <Rodal visible={visible} onClose={() => handleClose()}>
             <div className="contests-modal">
                 <div className="contests-modal__image">
-                {item?.img && <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" />}                    {/* <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div> */}
+                {item?.img && <img src={`https://mland.olit.su/${item.img}`} className="contests-modal__image-item" loading="lazy"/>}                    {/* <div className="contests-modal__badge">ПОБЕДИТЕЛЬ</div> */}
 
                     <div className={`arrow-left ${itemIndex == 0 ? 'disabled' : ''}`}>
                         <button onClick={() => {

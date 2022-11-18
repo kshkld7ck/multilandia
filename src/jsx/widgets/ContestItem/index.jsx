@@ -58,7 +58,7 @@ function ContestItem({ config, data }) {
         <div className="container">
             <h3>{config.title}</h3>
             <div className="contest-item__content">
-                {config.images?.length > 0 && <img src={`https://mland.olit.su${config.images[0]}`} className="contest-item__image" />}
+                {config.images?.length > 0 && <img src={`https://mland.olit.su${config.images[0]}`} className="contest-item__image" loading="lazy" />}
                 <div className="contest-item__time">
                     <div className="contests-carousel__counter">
                         {!config.status && <h4>Конкурс завершен</h4>}

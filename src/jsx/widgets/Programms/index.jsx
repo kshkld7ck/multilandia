@@ -164,7 +164,7 @@ function Programms({ config }) {
                                     {el.childrens.map((el) => {
                                         return <div className={`programms__item ${el.active ? 'active' : ''}`} key={el.id}>
                                             <div className="programms__item-time">{el.time} </div>
-                                            <img src={`https://mland.olit.su/${el.image}`} className="programms__item-image" alt="" />
+                                            <img src={`https://mland.olit.su/${el.image}`} className="programms__item-image" alt="" loading="lazy" />
                                             <div className="programms__item-info">
                                                 <div className="programms__item-name">{el.title}</div>
                                                 <div className="programms__item-tags hidden_xs">

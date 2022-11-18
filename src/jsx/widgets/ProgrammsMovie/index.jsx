@@ -12,7 +12,7 @@ function ProgrammsMovie({ config }) {
                             <span>{el.date.date}</span>
                             <p>{el.date.time}</p>
                         </div>
-                        <img src={`https://mland.olit.su/${el.image}`} className="programms__item-image" alt="" />
+                        <img src={`https://mland.olit.su/${el.image}`} className="programms__item-image" alt=""  loading="lazy"/>
                         <div className="programms__item-info">
                             <div className="programms__item-name">{el.title}</div>
                             <div className="programms__item-tags">

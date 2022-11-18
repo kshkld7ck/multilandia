@@ -164,7 +164,12 @@
         font-size: 18px;
         line-height: 24px;
         color: #5b4670;
+        padding: 0 10px;
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+            font-size: 10px;
+            line-height: 14px;
+        }
     }
     .news__sub {
         font-weight: 500;

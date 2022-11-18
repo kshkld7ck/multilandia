@@ -8,7 +8,7 @@ function PromoVideo({ config }) {
     return <section className="promo-video">
         <div className="container">
             <div className="promo-video__content">
-                <img className="promo-video__item-image" src={`https://mland.olit.su/${config.image}`} alt="" />
+                <img className="promo-video__item-image" src={`https://mland.olit.su/${config.image}`} alt="" loading="lazy" />
                 <div className="promo-video__item-info">
                     <div className="promo-video__item-title">
                         {config.title}

@@ -43,7 +43,7 @@ export default function RenderItem(el) {
     console.log('qwe', configDate)
     const [days, hours, minutes, seconds] = useCountdown(el.end);
     return <Link to={el.url} className="contests-carousel__item" key={el.id}>
-        <img src={`https://mland.olit.su${el.image}`} className="contests-carousel__image" />
+        <img src={`https://mland.olit.su${el.image}`} className="contests-carousel__image"  loading="lazy"/>
         {el.title && <div className="contests-carousel__title">{el.title}</div>}
         {el.text && <div className="contests-carousel__text">{el.text}</div>}
         {el.end && now < configDate && <div className="contests-carousel__counter">

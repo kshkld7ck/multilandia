@@ -24,7 +24,7 @@ function MoviePage({ config }) {
             </h3>
 
             <div className="movie-page__content">
-                <img src={`https://mland.olit.su/${config.img}`} alt="" className="movie-page__image" />
+                <img src={`https://mland.olit.su/${config.img}`} alt="" className="movie-page__image" loading="lazy" />
 
                 <div className="movie-page__info">
                     {Object.values(config.properties).map((el) => {

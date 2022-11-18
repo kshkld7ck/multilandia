@@ -64,7 +64,7 @@ function Movies({ config }) {
                 <Slider {...settings}>
                     {config.items.map((el) => {
                         return <Link to={el.url || '/'} className={`movies__item ${el.url ? "" : "disabled"}`}>
-                            <img src={`https://mland.olit.su${el.image}`} className="movies__image" />
+                            <img src={`https://mland.olit.su${el.image}`} className="movies__image" loading="lazy" />
                             {el.title && <div className="movies__title">{el.title}</div>}
                             {el.text && <div className="movies__text">{el.text}</div>}
                             {el.sub && <div className="movies__sub">{el.sub}</div>}

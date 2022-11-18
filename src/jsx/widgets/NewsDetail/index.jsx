@@ -45,7 +45,7 @@ function NewsDetail({ config }) {
             {config.images?.length > 0 && <div className="news-detail__slider">
                 <Slider {...settings}>
                     {config.images.map((el) => {
-                        return <img className="news-detail__image" src={`https://mland.olit.su${el}`} alt="" />
+                        return <img className="news-detail__image" src={`https://mland.olit.su${el}`} alt=""loading="lazy"  />
                     })}
                 </Slider>
                 {config.images?.length > 1 && <div className="banners__item-arrows">
