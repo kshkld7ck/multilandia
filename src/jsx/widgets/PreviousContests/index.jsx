@@ -11,7 +11,7 @@ function PreviousContests({ config }) {
                 {config.items.map((el) => {
                     return <Link to={el.url} className="prev-contests__item" key={el.id}>
                         <div className="prev-contests__item-contetn">
-                            <img src={`https://mland.olit.su/${el.image}`} alt="" className="prev-contests__image" />
+                            <img src={`https://mland.olit.su${el.image}`} alt="" className="prev-contests__image" />
                             <div className="prev-contests__title">
                                 {el.title}
                             </div>
