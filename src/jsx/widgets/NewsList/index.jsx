@@ -23,7 +23,7 @@ function NewsList({ config }) {
         }
 
         console.log('params', params)
-        Axios.get(`/api/${params.url}`).then(function (response) {
+        Axios.get(`/api${params.url}`).then(function (response) {
             if (response.data) {
                 setItems(response.data.items)
                 console.log('data', response.data.items)
