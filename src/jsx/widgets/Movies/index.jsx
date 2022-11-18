@@ -19,22 +19,22 @@ function Movies({ config }) {
             {
                 breakpoint: 1800,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: config.items?.length > 2 ? 3 : config.items.length,
+                    slidesToScroll: config.items?.length > 2 ? 3 : config.items.length,
                 }
             },
             {
                 breakpoint: 991,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: config.items?.length > 2 ? 2 : config.items.length,
+                    slidesToScroll: config.items?.length > 2 ? 2 : config.items.length,
                 }
             },
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: config.items?.length > 2 ? 2 : config.items.length,
+                    slidesToScroll: config.items?.length > 2 ? 2 : config.items.length,
                 }
             },
             {

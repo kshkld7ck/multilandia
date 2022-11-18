@@ -41,10 +41,16 @@
         }
         &.selected {
             a {
-                background: linear-gradient(90deg, #f47456 0%, #5772f7 100%);
+                background: #5772f7;
                 color: #fff;
+                &:hover {
+                    color: #fff;
+                }
             }
         }
+    }
+    img {
+        max-width: 30px;
     }
     img.reverse {
         transform: scaleX(-1);

@@ -11,21 +11,25 @@ function NewsList({ config }) {
     const [activePage, setActivePage] = useState(config.pagination.page);
     const [pages, setPages] = useState(config.pagination.pages)
     const [items, setItems] = useState(config.items);
-    const [activeId, setActiveId] = useState(0);
+    const [activeId, setActiveId] = useState(config.filter?.items?.filter((el) => location.includes(el.id))[0]?.id);
     const handleCallback = (id) => {
-        setActiveId(id)
+        setActiveId(id);
+        // console.log(window.history.pushState("", "", id));
     }
+    // console.log('test1', config.filter?.items?.filter((el) => !!location.includes(el.id))[0].id)
+    // console.log('test', config?.filter.items)
 
     useEffect(() => {
         const params = {
-            url: `${config.filter.url.replace("{ID}", activeId)}&full=0`
+            url: `${config.filter.url.replace("{ID}", activeId)}&full=0&page=${activePage}`
         }
+        
 
-        console.log('params', params)
+        console.log('params', params.url)
         Axios.get(`/api${params.url}`).then(function (response) {
             if (response.data) {
                 setItems(response.data.items)
-                console.log('data', response.data.items)
+                // console.log('data', response.data.items)
                 // setActivePage()
                 setPages(response.data?.pagination?.pages)
             }
@@ -35,7 +39,7 @@ function NewsList({ config }) {
         <div className="container">
             <div className="news-list__content">
                 <h3>{config.title}</h3>
-                {config?.filter?.items?.length > 0 && <SortBlock items={config.filter.items} callback={handleCallback} />}
+                {config?.filter?.items?.length > 0 && <SortBlock items={config.filter.items} activeId={activeId} callback={handleCallback} />}
                 <div className="news-list__items">
                     {items?.length > 0 && items.map((el) => {
                         return <Link href={el.url || '/'} className="news__item">
@@ -47,7 +51,7 @@ function NewsList({ config }) {
                     })}
                 </div>
             </div>
-            {/* {config.pagination.pages > 1 && <Pagination nPages={config.pagination.pages} currentPage={activePage} setCurrentPage={(item) => setActivePage(item.selected)} />} */}
+            {config.pagination.pages > 1 && <Pagination nPages={config.pagination.pages} currentPage={activePage} setCurrentPage={(item) => setActivePage(item.selected)} />}
         </div>
     </section>
 }

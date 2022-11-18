@@ -7,7 +7,7 @@ import { useOutsideAlerter } from '../../layouts/Header';
 import { useWindowSize } from '../../layouts/Header';
 
 function SortBlock(props) {
-    const { items, callback } = props;
+    const { items, callback, activeId } = props;
     const wrapperRef = useRef(null);
 
     const [visible, setVisible] = useState(false);
@@ -43,7 +43,7 @@ function SortBlock(props) {
                 {items.map((el) => <div
                     className={classNames({
                         "sort-block__item": true,
-                        "active": el.id == active,
+                        "active": el.id == activeId,
 
                     })} key={el.id} onClick={() => {
                         setActive(el.id)
